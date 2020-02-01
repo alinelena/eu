@@ -46,7 +46,7 @@ link = "plugins/google-map/map.js"
 
 ############################# Navigation ##################################
 [[menu.main]]
-name = "About Us"
+name = "Home"
 URL = "about"
 weight = 1
 
@@ -71,14 +71,9 @@ URL = "pricing"
 weight = 5
 
 [[menu.main]]
-name = "Blog"
-URL = "blog"
-weight = 6
-
-[[menu.main]]
 name = "Contact"
 URL = "contact"
-weight = 7
+weight = 6
 
 
 
@@ -86,8 +81,8 @@ weight = 7
 [params]
 logo = "images/logo.png"
 # Meta data
-description = "Responsive Multipurpose Parallax HTML5 Template"
-author = "Themefisher"
+description = "AME"
+author = "Alin M Elena"
 # Google Analitycs
 google_analitycs_id = "" # Your ID
 # post share
@@ -102,14 +97,11 @@ preloader = "images/logo.png"
 [params.map]
 enable = false
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
-map_latitude = "53.3446"
-map_longitude = "-2.6399"
+map_latitude = "53.33916531"
+map_longitude = "-2.637664116"
 map_marker = "images/marker.png"
 
 ############################# social icons ##########################
-[[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#"
 
 [[params.social]]
 icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
@@ -123,14 +115,6 @@ link = "#"
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "#"
 
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-[[params.social]]
-icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
 
 ################################ English Language ########################
 [Languages.en]
@@ -139,11 +123,3 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-home = "Accueil"
