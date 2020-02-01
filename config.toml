@@ -79,7 +79,7 @@ weight = 6
 
 ############################# Default Parameters ##########################
 [params]
-logo = ""
+logo = "images/logo.png"
 # Meta data
 description = "AME"
 author = "Alin M Elena"
@@ -90,7 +90,7 @@ post_share = true
 
 # preloader
 [params.preloader]
-enable = false
+enable = true
 preloader = "images/logo.png"
 
 # google map
