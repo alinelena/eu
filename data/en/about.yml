@@ -2,13 +2,3 @@
 about:
   enable : true
   title : About Me
-  about_item :
-  -  content : I was born in 1980 (long time ago) in Dragasani, Valcea, Romania. First years I spent going to nursery school, kindergarden and playing. Then when I was almost 8 and they sent me to school.   I did my primary, secondary and High School in my home town.
-
-  - icon : ti-cup # themify icon pack : https://themify.me/themify-icons
-    title : We're Professional
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
-
-  - icon : ti-thought # themify icon pack : https://themify.me/themify-icons
-    title : We're Genius
-    content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
