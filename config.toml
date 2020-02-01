@@ -51,7 +51,7 @@ URL = "about"
 weight = 1
 
 [[menu.main]]
-name = "Service"
+name = "Curriculum vitæ"
 URL = "services"
 weight = 2
 
@@ -95,7 +95,7 @@ preloader = "images/logo.png"
 
 # google map
 [params.map]
-enable = false
+enable = true
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
 map_latitude = "53.33916531"
 map_longitude = "-2.637664116"
