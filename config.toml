@@ -1,7 +1,7 @@
 ################################# Default configuration ###################
-baseURL = "https://examplesite.com"
+baseURL = "https://drFaustroll.gitlab.io/eu"
 title = "Meghna"
-theme = "meghna-hugo"
+theme = "meghna"
 # post pagination
 paginate = "6"
 # post excerpt
