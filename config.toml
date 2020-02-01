@@ -41,6 +41,8 @@ link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
 link = "plugins/wow/wow.min.js"
 [[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
+[[params.plugins.js]]
+link = "plugins/google-map/map.js"
 
 ############################# Navigation ##################################
 [[menu.main]]
@@ -93,7 +95,7 @@ preloader = "images/logo.png"
 
 # google map
 [params.map]
-enable = false
+enable = true
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
 map_latitude = "53.339165"
 map_longitude = "-2.6376641"
