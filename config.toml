@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://drFaustroll.gitlab.io/eu"
+baseURL = "https://test.elena.space"
 title = "Meghna"
 theme = "meghna-hugo"
 # post pagination
