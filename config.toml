@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "https://test.elena.space"
-title = "Meghna"
+title = "Alin M Elena"
 theme = "meghna-hugo"
 # post pagination
 paginate = "6"
@@ -102,8 +102,8 @@ preloader = "images/logo.png"
 [params.map]
 enable = false
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
+map_latitude = "53.3446"
+map_longitude = "-2.6399"
 map_marker = "images/marker.png"
 
 ############################# social icons ##########################
