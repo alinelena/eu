@@ -5,9 +5,7 @@ variables:
 
 pages:
   script:
-  - hugo 
-  - ls -lrth
-  - cd public && ls -lrth  resources/*
+  - hugo
   artifacts:
     paths:
     - public
