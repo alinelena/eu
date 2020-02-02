@@ -1,5 +1,5 @@
 ################################# Testimonial #########################
-testimonial:
+news:
   enable : true
   title:  "Random News"
   bg_image : images/backgrounds/news.jpg
