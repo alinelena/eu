@@ -3,10 +3,10 @@
 {{ if $data.about.about.enable }}
 {{ with $data.about.about }}
 {{"<!-- feature -->" | safeHTML}}
-<section class="section section-bg about-2 padding-0" id="about">
+<section class="section section-bg about-2 padding-0" id="about-2">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 padding-0" style="background-image: url('{{ .image_webp | absURL }}'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+      <div class="col-lg-6 padding-1" style="background-image: url('{{ .image_webp | absURL }}'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
       <!-- this image is for trigger this section fallback background image -->
       <img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .image | absURL }})'" src="{{ .image_webp | absURL }}" />
       </div>
