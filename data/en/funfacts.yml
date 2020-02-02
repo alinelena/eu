@@ -5,19 +5,19 @@ funfacts:
   bg_image_webp : "images/backgrounds/bg-white-wall.webp"
   counter_item:
     # counter item loop
-    - title : "Not Unhappy friends"
+    - title : "papers"
       icon : "ti-face-smile" # themify icon pack : https://themify.me/themify-icons
-      count : "1"
+      count : "6"
     
     # counter item loop
-    - title : "lines of code"
+    - title : "workshops"
       icon : "ti-archive" # themify icon pack : https://themify.me/themify-icons
       count : "many"
     
     # counter item loop
-    - title : "Positive feedback"
+    - title : "seminars"
       icon : "ti-thumb-up" # themify icon pack : https://themify.me/themify-icons
-      count : "158"
+      count : "15"
     
     # counter item loop
     - title : "Cups of Coffee/day"
