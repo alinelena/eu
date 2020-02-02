@@ -7,21 +7,21 @@ testimonial:
   testimonial_item :
     # testimonial item loop
     - name : CCP5 Summer School 2020
-      image : images/portofolio/portofolio-1.jpg
-      image_webp : images/portofolio/portofolio-1.webp
+      image : images/portfolio/portfolio-1.jpg
+      image_webp : images/portfolio/portfolio-1.webp
       date : Feb 2, 2020
       content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
       
     # testimonial item loop
     - name : New computer build
-      image : images/portofolio/portofolio-2.jpg
-      image_webp : images/portofolio/portofolio-2.webp
+      image : images/portfolio/portfolio-2.jpg
+      image_webp : images/portfolio/portfolio-2.webp
       date : Feb 2, 2020
       content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
       
     # testimonial item loop
     - name :  automation working
-      image : images/portofolio/portofolio-3.jpg
-      image_webp : images/portofolio/portofolio-3.webp
+      image : images/portfolio/portfolio-3.jpg
+      image_webp : images/portfolio/portfolio-3.webp
       date : Feb 2, 2020
       content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
