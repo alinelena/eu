@@ -136,3 +136,6 @@ title: "Curriculum vitæ"
 -   philosophy, music, urban culture and architecture, contemporary and
     absurd literature
 
+last updated 2015
+
+to be updated 01/03/2020
