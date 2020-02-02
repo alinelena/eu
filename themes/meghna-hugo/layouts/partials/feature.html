@@ -12,7 +12,6 @@
       </div>
       <div class="col-lg-6">
         <div class="content-block">
-          <h2>{{ .title | markdownify }}</h2>
       {{ .content | markdownify }}
           <div class="row">
             {{ range .feature_item }}
@@ -24,7 +23,6 @@
                 </div>
                 {{ end }}
                 <div class="media-body">
-                  <h4 class="media-heading">{{ .title | markdownify }}</h4>
       {{ .content | markdownify }}
                 </div>
               </div>
