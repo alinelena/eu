@@ -1,6 +1,6 @@
 ############################# feature ###################################
 feature:
-  enable : true
+  enable : false
   image : images/about/geometry.png
   image_webp : images/about/geometry.webp
   content : "I was born in 1980 (long time ago) in Dragasani, Valcea, Romania. First years I spent going to nursery school, kindergarden and playing. Then when I was almost 8 and they sent me to school. I did my primary, secondary and High School in my home town.
