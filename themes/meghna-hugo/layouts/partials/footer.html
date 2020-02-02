@@ -1,29 +1,29 @@
 {{"<!-- end Contact Area -->" | safeHTML}}
 <footer id="footer" class="section-bg">
-	<div class="container">
-		<div class="row wow fadeInUp" data-wow-duration="500ms">
-			<div class="col-xl-12">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-duration="500ms">
+      <div class="col-xl-12">
 
-				{{"<!-- Footer Social Links -->" | safeHTML}}
-				<div class="social-icon">
-					<ul class="list-inline">
-						{{ range .Site.Params.social }}
-						<li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-						{{ end }}
-					</ul>
-				</div>
+        {{"<!-- Footer Social Links -->" | safeHTML}}
+        <div class="social-icon">
+          <ul class="list-inline">
+            {{ range .Site.Params.social }}
+            <li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+            {{ end }}
+          </ul>
+        </div>
 
-				{{"<!-- copyright -->" | safeHTML}}
-				<div class="copyright text-center">
-					<a href="{{ .Site.BaseURL | absLangURL }}">
-						<img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-					</a>
-					<br>
-					<p>{{ i18n "copyright" | markdownify }}</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        {{"<!-- copyright -->" | safeHTML}}
+        <div class="copyright text-center">
+          <a href="{{ .Site.BaseURL | absLangURL }}">
+            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
+          </a>
+          <br>
+          <p>{{ i18n "copyright" | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 {{"<!-- /footer -->" | safeHTML}}
 

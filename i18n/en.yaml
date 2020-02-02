@@ -15,7 +15,7 @@
 - id: all
   translation: All
 - id: copyright
-  translation: copyright &copy; 2004-2020 Alin M Elena all right reserved
+  translation: copyright &copy; 2004-2020 Alin M Elena all rights reserved. done with Hugo and modified meghna-hugo theme
 - id: curriculum
   translation: Curriculum vitæ
 - id: pubs
