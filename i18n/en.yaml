@@ -1,5 +1,5 @@
 - id: blogTitle
-  translation: Latest Post
+  translation: Latest Posts
 - id: readMore
   translation: Read more
 - id: viewAllPost
@@ -15,7 +15,7 @@
 - id: all
   translation: All
 - id: copyright
-  translation: copyright &copy; 2004-2020 Alin M Elena all rights reserved. done with Hugo and modified meghna-hugo theme
+  translation: copyright &copy; 2004-2020 Alin M Elena all rights reserved. done with [Hugo](https://gohugo.io/) and modified [meghna-hugo theme](https://themes.gohugo.io/meghna-hugo/)
 - id: curriculum
   translation: Curriculum vitæ
 - id: pubs
