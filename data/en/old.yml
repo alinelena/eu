@@ -1,8 +1,8 @@
 ############################# call to action ##############################
-cta:
+old:
   enable : true
-  bg_image : "images/backgrounds/red-wall.jpg"
-  bg_image_webp : "images/backgrounds/red-wall.webp"
+  bg_image : "images/backgrounds/old-wall.jpg"
+  bg_image_webp : "images/backgrounds/old-wall.webp"
   title : ""
   content : ""
   button:

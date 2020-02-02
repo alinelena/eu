@@ -1,8 +1,8 @@
 ################################# funfacts ##################################
 funfacts:
   enable : true
-  bg_image : "images/backgrounds/bg-white-wall.jpg"
-  bg_image_webp : "images/backgrounds/bg-white-wall.webp"
+  bg_image : "images/backgrounds/stone-wall-2.jpg"
+  bg_image_webp : "images/backgrounds/stone-wall-2.webp"
   counter_item:
     # counter item loop
     - title : "papers"
@@ -12,7 +12,7 @@ funfacts:
     # counter item loop
     - title : "workshops"
       icon : "ti-archive" # themify icon pack : https://themify.me/themify-icons
-      count : "many"
+      count : "10"
     
     # counter item loop
     - title : "seminars"

@@ -1,8 +1,8 @@
 ############################# call to action ##############################
-cta:
+stones:
   enable : true
-  bg_image : "images/backgrounds/red-wall.jpg"
-  bg_image_webp : "images/backgrounds/red-wall.webp"
+  bg_image : "images/backgrounds/stone-wall.jpg"
+  bg_image_webp : "images/backgrounds/stone-wall.webp"
   title : ""
   content : ""
   button:
