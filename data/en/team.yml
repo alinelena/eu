@@ -4,10 +4,10 @@ team:
   title : Selected Collaborators
   team_member :
     # team member loop
-    - name : Prof X
+    - name : [Prof Kostya Trachenko](https://www.qmul.ac.uk/spa/people/academics/profiles/ktrachenko.html)
       image_webp : images/collab/prof-x.webp
       image : images/team/prof-x.png
-      content : Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
+      content : Collaboration with Kostya's group on various tools for analysing massive molecular simulations runs, tens of millions of atoms
 
     # team member loop
     - name : Prof Y
