@@ -7,7 +7,10 @@ team:
     - name : Prof Kostya Trachenko
       image_webp : images/collab/prof-x.webp
       image : images/team/prof-x.png
-      content : Collaboration with Kostya's group on various tools for analysing massive molecular simulations runs, tens of millions of atoms [Prof Kostya Trachenko](https://www.qmul.ac.uk/spa/people/academics/profiles/ktrachenko.html)
+      content : Collaboration with Kostya's group on various tools for analysing massive molecular simulations runs, tens of millions of atoms
+      social:
+        - icon: ti-world
+          link: https://www.qmul.ac.uk/spa/people/academics/profiles/ktrachenko.html
     # team member loop
     - name : Prof Y
       image_webp : images/collab/prof-y.webp
