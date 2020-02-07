@@ -24,7 +24,7 @@
             <input type="radio" name="shuffle-filter" value="all" checked="checked" />{{ i18n "all"}}
           </label>
           {{ $categories := slice }}
-          {{ range .item }}
+          {{ range .items }}
           {{ range .categories }}
           {{ $categories = $categories | append . }}
           {{ end }}
@@ -39,8 +39,8 @@
     </div>
 
     <div class="row shuffle-wrapper justify-content-center">
-      {{"<!-- portfolio item -->" | safeHTML}}
-      {{ range .portfolio_item }}
+      {{"<!-- items -->" | safeHTML}}
+      {{ range .items }}
       <div class="col-lg-4 shuffle-item"
         data-groups="[{{range $index, $element:= .categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
         <div class="portfolio-block mb-4">
