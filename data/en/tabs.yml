@@ -2,7 +2,7 @@
 tabs:
   enable : true
   title : Sample stuff
-  item :
+  items :
     # portfolio item loop
     - name : Tag Design
       image : images/portfolio/portfolio-1.jpg
