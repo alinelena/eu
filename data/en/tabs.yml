@@ -9,10 +9,10 @@ tabs:
       image_webp : images/portfolio/portfolio-1.webp
       categories : ["design"]
       content : "
-      - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
-      - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
-      - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
-      "
+- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
+- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
+- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nemo!
+"
     # portfolio item loop
     - name : Sound system
       image : images/portfolio/portfolio-2.jpg
