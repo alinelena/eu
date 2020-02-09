@@ -1,10 +1,10 @@
 ---
-title: "Test 1"
-date: 2018-09-12T14:51:12+06:00
+title: "new web page"
+date: 2020-02-10
 author: ame
 image_webp: images/blog/test.webp
 image: images/blog/test.jpg
-description : "This is meta description"
+description : "new webpage"
 ---
 
-some nice info
+After various tries a new webpage design. Still using hugo but with a new theme
