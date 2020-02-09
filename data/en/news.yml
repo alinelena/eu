@@ -10,7 +10,7 @@ news:
       image : images/news/library.jpg
       image_webp : images/library.webp
       date : Feb 2, 2020
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
+      content : Registrations are open... https://summer2020.ccp5.ac.uk/
       
     # testimonial item loop
     - name : New computer build
@@ -24,4 +24,4 @@ news:
       image : images/news/automation.jpg
       image_webp : images/news/automation.webp
       date : Feb 2, 2020
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
+      content : conbee II and xiaomi sensors, plus IKEA lights and switches mixed with wifi sensors based on esp8266-01 and 12e 
