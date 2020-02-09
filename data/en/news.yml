@@ -17,7 +17,7 @@ news:
       image : images/news/computer.jpg
       image_webp : images/news/computer.webp
       date : Feb 2, 2020
-      content : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minima ex, quia error, deserunt voluptatibus repellendus? Incidunt eligendi aliquam repellat molestias, vel sed optio rem odit quis ratione non consequuntur!
+      content :  the oil xeon is getting closer to a new life
       
     # testimonial item loop
     - name :  automation working
