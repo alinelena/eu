@@ -86,7 +86,7 @@ author = "Alin M Elena"
 # Google Analitycs
 google_analitycs_id = "" # Your ID
 # post share
-post_share = true
+post_share = false
 
 # preloader
 [params.preloader]
