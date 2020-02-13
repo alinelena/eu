@@ -18,7 +18,7 @@ team:
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
 
     # team member loop
-    - name : Prof Z
+    - name : Dr Z
       image_webp : images/collab/prof-z.webp
       image : images/team/prof-z.png
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
@@ -29,7 +29,7 @@ team:
       image : images/team/prof-s.png
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
 
-    - name :  Prof T
+    - name :  Dr T
       image_webp : images/collab/prof-t.webp
       image : images/team/prof-t.png
       content : Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
