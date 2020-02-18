@@ -5,7 +5,7 @@ banner:
   bg_image : "images/backgrounds/hero.png"
   icon : "ti-pulse" # themify icon pack : https://themify.me/themify-icons
   title : "Alin M Elena"
-  content : "personal site... keep scrolling"
+  content : "personal site ↓"
   button:
     enable : false
     label : "Explore Us"
