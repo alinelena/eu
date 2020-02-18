@@ -1,10 +1,10 @@
 ---
-title: "new web page"
+title: "Electronic structure libraries workshop"
 date: 2020-02-18T12:52:36+00:00
 author: ame
 image_webp: images/blog/esl.webp
 image: images/blog/esl.jpg
-description : "Electronic structure libraries workshop "
+description : "Electronic structure libraries workshop CECAM 2020 "
 ---
 
 Electronic structure libraries in CECAM workshop 2020.
