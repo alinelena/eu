@@ -3,7 +3,7 @@ title: "Electronic structure libraries workshop"
 date: 2020-02-18T12:52:36+00:00
 author: ame
 image_webp: images/blog/esl.webp
-image: images/blog/esl.jpg
+image: images/blog/esl.jpeg
 description : "Electronic structure libraries workshop CECAM 2020 "
 ---
 
