@@ -4,11 +4,14 @@ title:       "Publications"
 
 ## Papers
 
-
+- Janou A Koskamp, Sergio E Ruiz-Hernandez, Devis Di Tommaso, Alin Marin Elena, Nora H De Leeuw, Mariette Wolthers, *Reconsidering Calcium Dehydration as the Rate-Determining Step in Calcium Mineral Growth*\
+  The Journal of Physical Chemistry C 123 (44), 26895-26903
 - Martyn F. Guest, Aidan B. G. Chalk and Alin M. Elena *DL_POLY - A performance overview analysing, understanding and exploiting available HPC technology* Molecular Simulation, 2019\
   DOI:https://doi.org/10.1080/08927022.2019.1603380
 - Aidan B. G. Chalk and Alin M. Elena *Task-Based Parallelism with OpenMP: a case study with DL_POLY_4* Molecular Simulations, 2019\
   DOI:https://doi.org/10.1080/08927022.2019.1606424
+- Christian Trott, Tzu-Ray Shan, Stan Moore, Aidan Thompson, Steve Plimpton, Markus Höhnerbach, Ahmed Ismail, Paolo Bientinesi, Alin Marin Elena, Christian Lalanne, Victor Gamayunov, Gilles Civario, Michael Lysaght, Ilian Todorov, Iain Bethune, Antonia Collis, Gianpaolo Gobbo, Benedict Leimkuhler, Sapna Sarupria, Walter Hanger, Ryan DeFever, Linh Ngo, Amy Apon, Jesús Izaguirre, Douglas Thain, Eric Darve, Roberto Di Remigio, Daniel Crawford, Luca Frediani, Erik Lindahl, James Phillips, Ross Walker\
+  Proceedings of the SC15 Workshop on Producing High Performance and Sustainable Software for Molecular Simulation, 2016
 - Alin Marin Elena and Ivan Rungger. *Enabling Smeagol on Xeon Phi: Lessons Learned.* PRACE White Paper, 2014\
    www.prace-ri.eu/IMG/pdf/wp134.pdf
 - Alin Marin Elena, Simone Meloni and Giovanni Ciccotti *Equilibrium and Rate Constants, and Reaction Mechanism of the HF Dissociation in the HF(H2O)7 Cluster by ab Initio Rare Event Simulations* J. Phys. Chem. A 2013 **117**, 49, 13039-13050\
