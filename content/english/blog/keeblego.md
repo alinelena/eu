@@ -23,11 +23,11 @@ https://deskthority.net/viewtopic.php?f=7&t=6050&start=
 How they say the rest is history, the Model M is still not fixed.
 but...
 
-![UK 80 my first hand wire at some intermediate stage](images/blog/uk80.jpg)
+![UK 80 my first hand wire at some intermediate stage](/static/images/blog/uk80.jpg)
 
 it is still in use today and goes strong.
 
-![UK 80 my first hand wire at some time in 2021](images/blog/uk80-f.jpg)
+![UK 80 my first hand wire at some time in 2021](/static/images/blog/uk80-f.jpg)
 ok not a nice view I have to admit...
 
 
