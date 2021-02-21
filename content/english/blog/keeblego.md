@@ -62,7 +62,7 @@ keycaps will be /dev/tty blanks and not only of course still in post... till the
 oem keycaps blanks from all over but mainly carbon set from ymdk.
 
 
-{{< figure src="/images/blog/m65-oem.jpg" title="m65 first pcb lego oem keycaps" class="img-fluid mb-50">}}
+{{< figure src="/images/blog/m65-oem.jpg" title="m65 first pcb lego oem keycaps" wodth="700px">}}
 
 
 
