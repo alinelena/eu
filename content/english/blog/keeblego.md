@@ -22,12 +22,11 @@ https://deskthority.net/viewtopic.php?f=7&t=6050&start=
 
 How they say the rest is history, the Model M is still not fixed.
 but...
-
-<img class="img-fluid mb-50" src="/images/blog/uk80.jpg" alt="UK 80 my first hand wire at some intermediate stage" />
+![UK 80 my first hand wire at some intermediate stage](/images/blog/uk80.jpg "img-fluid mb-50")
 
 it is still in use today and goes strong.
 
-<img class="img-fluid mb-50" src="/images/blog/uk80-f.jpg" alt="UK 80 my first hand wire at some time in 2021" />
+![UK 80 my first hand wire at some time in 2021](/images/blog/uk80-f.jpg "img-fluid mb-50")
 
 ok not a nice view I have to admit... but a theme emerge: lego
 
