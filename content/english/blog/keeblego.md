@@ -28,7 +28,7 @@ but...
 it is still in use today and goes strong.
 
 ![UK 80 my first hand wire at some time in 2021](/images/blog/uk80-f.jpg)
-<img style="width: 800" src="/images/blog/uk80-f.jpg" alt="UK 80 my first hand wire at some time in 2021"/>
+<img style="width:800px" src="/images/blog/uk80-f.jpg" alt="UK 80 my first hand wire at some time in 2021"/>
 
 ok not a nice view I have to admit... but a theme emerge: lego
 
