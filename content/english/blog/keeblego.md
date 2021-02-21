@@ -27,7 +27,7 @@ it is still in use today and goes strong.
 
 ![UK 80 my first hand wire at some time in 2021](/images/blog/uk80-f.jpg "img-fluid mb-50")
 
-ok not a nice view I have to admit... but a theme emerge: lego
+ok not a nice view I have to admit... but a theme emerges: lego
 
 Originally the lego suppose to be only support for soldering and building. After seeing the prices to make a box
 I decided to use the lego for the box too and do the unholly thing to glue the plate from tiles...
@@ -36,15 +36,24 @@ Later I noticed the ortholinear it intrigued me by I was afraid to try...
 Late 2019 i started to toy with the idea and build a hand wired 6x13 ortholinear.
 I liked it... then when lockdown started I thought let me do a pcb... I seen plaid and I liked the THT idea.
 
-ended up with this...
+Leant kicad and ended up with this...
 
 ![m78 first pcb plate mounted](/images/blog/m78.jpg "img-fluid mb-50")
 
 not bad but something is missing. For once I notices 6 rows are too many and glueing that plate on lego
 really was a blasphemy... so why not lego holes in the PCB directly?
 
+so after some more toiling this came out...
+
 ![m65 first pcb lego holes](/images/blog/m65-pcb.jpg "img-fluid mb-50")
 
+I was a little bit afraid the holes will not be done right... but I was wrong... they are spot on as
+I put them in gebers... One thing they seems to be a little bit exact for the lego and some pressure needs to be applied
+to get them in...
+
+but the result is not too bad...
+
+![m65 first pcb lego no keycaps](/images/blog/m65-nokey.jpg "img-fluid mb-50")
 
 
 
