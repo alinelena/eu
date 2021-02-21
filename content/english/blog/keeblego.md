@@ -50,8 +50,8 @@ so after some more toiling this came out...
 ![m65 first pcb lego holes](/images/blog/m65-pcb.jpg "img-fluid mb-50")
 
 I was a little bit afraid the holes will not be done right... but I was wrong... they are spot on as
-I put them in gebers... One thing they seems to be a little bit exact for the lego and some pressure needs to be applied
-to get them in...
+I put them in gerbers... One thing they seems to be a little bit exact for the lego and some pressure needs to be applied
+to get them in... I used lego plates 1x4 better are 1x2 but I did not have the colours I wanted to I need to wait to replace them.
 
 but the result is not too bad...
 
@@ -81,4 +81,5 @@ switches and keycaps as you please...
 you can comment in here... https://www.reddit.com/r/olkb/comments/lntirw/finally_all_in_lego/
 
 **note**: pictures are horrible mainly as an anti-thesis to all the glamorous shots one sees on reddit..
+maybe one day I will publish the pictures I took with my Nikon D610
 
