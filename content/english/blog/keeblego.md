@@ -7,6 +7,8 @@ image: images/blog/m65-layout.png
 description : "The mechanical keyboard madness almost there"
 ---
 
+**motto:** *know the rules then break them*
+
 I have been typing for 31 years or so... Until few years ago I did not really
 pay too much attention to what I used... Over the years I used quite few keyboards.
 Commodore 64 and some Romanian clone of ZX Spectrum HC-85, IBM Model F and Model M,
@@ -55,6 +57,28 @@ but the result is not too bad...
 
 ![m65 first pcb lego no keycaps](/images/blog/m65-nokey.jpg "img-fluid mb-50")
 
+keycaps will be /dev/tty blanks and not only of course still in post... till then some intermediate...
+oem keycaps blanks from all over but mainly carbon set from ymdk.
+
+![m65 first pcb lego oem keycaps](/images/blog/m65-oem.jpg "img-fluid mb-50")
 
 
+another build with susuwatari will follow for my girlfriend to try the ortholinear...
+
+the firmware is qmk: https://github.com/alinelena/qmk_firmware/tree/m78 I hope to contribute it back
+
+the mcu is: Black Pill APM32F103CB 128KB from robotdyn
+
+the lego is all used sourced from brickowl...
+
+the pcb is GPL 3.0... in here:  https://gitlab.com/drFaustroll/m65.git
+
+I am still wondering if I shall put a stainless steel base plate I am not really yet convinced by the lego plate alone.
+
+Now the money bit: 24 pounds for 5 pcbs shipped to UK, around 7 pounds for lego. the mcu 9.43 dollars for 3 shipped.
+switches and keycaps as you please...
+
+you can comment in here... https://www.reddit.com/r/olkb/comments/lntirw/finally_all_in_lego/
+
+**note**: pictures are horrible mainly as an anti-thesis to all the glamorous shots one sees on reddit..
 
