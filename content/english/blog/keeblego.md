@@ -23,11 +23,12 @@ https://deskthority.net/viewtopic.php?f=7&t=6050&start=
 
 How they say the rest is history, the Model M is still not fixed.
 but...
-![UK 80 my first hand wire at some intermediate stage](/images/blog/uk80.jpg "img-fluid mb-50")
+
+{{< figure src="/images/blog/uk80.jpg" title="UK 80 my first hand wire at some intermediate stage" class="img-fluid mb-50">}}
 
 it is still in use today and goes strong.
 
-![UK 80 my first hand wire at some time in 2021](/images/blog/uk80-f.jpg "img-fluid mb-50")
+{{< figure src="/images/blog/uk80-f.jpg" title="UK 80 my first hand wire at some time in 2021" class="img-fluid mb-50">}}
 
 ok not a nice view I have to admit... but a theme emerges: lego
 
@@ -40,14 +41,14 @@ I liked it... then when lockdown started I thought let me do a pcb... I seen pla
 
 Leant kicad and ended up with this...
 
-![m78 first pcb plate mounted](/images/blog/m78.jpg "img-fluid mb-50")
+{{< figure src="/images/blog/m78.jpg" title="m78 first pcb plate mounted" class="img-fluid mb-50">}}
 
 not bad but something is missing. For once I notices 6 rows are too many and glueing that plate on lego
 really was a blasphemy... so why not lego holes in the PCB directly?
 
 so after some more toiling this came out...
 
-![m65 first pcb lego holes](/images/blog/m65-pcb.jpg "img-fluid mb-50")
+{{< figure src="/images/blog/m65-pcb.jpg" title="m65 first pcb lego holes" class="img-fluid mb-50">}}
 
 I was a little bit afraid the holes will not be done right... but I was wrong... they are spot on as
 I put them in gerbers... One thing they seems to be a little bit exact for the lego and some pressure needs to be applied
@@ -55,12 +56,11 @@ to get them in... I used lego plates 1x4 better are 1x2 but I did not have the c
 
 but the result is not too bad...
 
-![m65 first pcb lego no keycaps](/images/blog/m65-nokey.jpg "img-fluid mb-50")
+{{< figure src="/images/blog/m65-nokey.jpg" title="m65 first pcb lego no keycaps" class="img-fluid mb-50">}}
 
 keycaps will be /dev/tty blanks and not only of course still in post... till then some intermediate...
 oem keycaps blanks from all over but mainly carbon set from ymdk.
 
-![m65 first pcb lego oem keycaps](/images/blog/m65-oem.jpg "img-fluid mb-50")
 
 {{< figure src="/images/blog/m65-oem.jpg" title="m65 first pcb lego oem keycaps" class="img-fluid mb-50">}}
 
@@ -84,6 +84,8 @@ switches and keycaps as you please...
 you can comment in here... https://www.reddit.com/r/olkb/comments/lntirw/finally_all_in_lego/
 
 for the price of postage and production cost (£5) I can part with 2 of each of the pcb 5x13 or 6x13.
+
+fun facts... the lego plate needed is 32x16 in lego studs, in mm 256x128... if you like numbers you spot the pattern...
 
 **note**: pictures are horrible mainly as an anti-thesis to all the glamorous shots one sees on reddit..
 maybe one day I will publish the pictures I took with my Nikon D610
