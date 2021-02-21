@@ -7,7 +7,6 @@ image: images/blog/m65-layout.png
 description : "The mechanical keyboard madness almost there"
 ---
 
-# Why?
 I have been typing for 31 years or so... Until few years ago I did not really
 pay too much attention to what I used... Over the years I used quite few keyboards.
 Commodore 64 and some Romanian clone of ZX Spectrum HC-85, IBM Model F and Model M,
@@ -33,10 +32,19 @@ ok not a nice view I have to admit... but a theme emerge: lego
 Originally the lego suppose to be only support for soldering and building. After seeing the prices to make a box
 I decided to use the lego for the box too and do the unholly thing to glue the plate from tiles...
 
+Later I noticed the ortholinear it intrigued me by I was afraid to try...
+Late 2019 i started to toy with the idea and build a hand wired 6x13 ortholinear.
+I liked it... then when lockdown started I thought let me do a pcb... I seen plaid and I liked the THT idea.
 
+ended up with this...
 
+![m78 first pcb plate mounted](/images/blog/m78.jpg "img-fluid mb-50")
 
-# How?
+not bad but something is missing. For once I notices 6 rows are too many and glueing that plate on lego
+really was a blasphemy... so why not lego holes in the PCB directly?
+
+![m65 first pcb lego holes](/images/blog/m65-pcb.jpg "img-fluid mb-50")
+
 
 
 
