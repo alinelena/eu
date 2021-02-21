@@ -24,10 +24,12 @@ How they say the rest is history, the Model M is still not fixed.
 but...
 
 ![UK 80 my first hand wire at some intermediate stage](/images/blog/uk80.jpg)
+<img class="img-fluid mb-50" src="/images/blog/uk80.jpg" alt="UK 80 my first hand wire at some intermediate stage" />
 
 it is still in use today and goes strong.
 
 ![UK 80 my first hand wire at some time in 2021](/images/blog/uk80-f.jpg)
+<img class="img-fluid mb-50" src="/images/blog/uk80-f.jpg" alt="UK 80 my first hand wire at some time in 2021" />
 
 ok not a nice view I have to admit... but a theme emerge: lego
 
