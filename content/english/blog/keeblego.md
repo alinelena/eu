@@ -64,7 +64,7 @@ oem keycaps blanks from all over but mainly carbon set from ymdk.
 
 {{< figure src="/images/blog/m65-oem.jpg" title="m65 first pcb lego oem keycaps, February 2021" width="700px">}}
 
-here i almost final version in /dev/tty
+here is the almost final version in /dev/tty
 
 {{< figure src="/images/blog/m65-tty.png" title="m65 first pcb lego oem keycaps, February 2021" width="700px">}}
 
