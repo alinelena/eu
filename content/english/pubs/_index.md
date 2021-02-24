@@ -4,36 +4,36 @@ title:       "Publications"
 
 ## Papers
 
+- A Diver, O Dicks, IT Todorov, AM Elena, K Trachenko, *Radiation damage effects in amorphous zirconolite*,
+  Journal of Nuclear Materials 2021, 544, 152654, DOI: https://doi.org/10.1016/j.jnucmat.2020.152654
 - Micael JT Oliveira, Nick Papior, Yann Pouillon, Volker Blum, Emilio Artacho, Damien Caliste, Fabiano Corsetti, Stefano De
   Gironcoli, Alin M Elena, Alberto García, Víctor M García-Suárez, Luigi Genovese, William P Huhn, Georg Huhs, Sebastian Kokott,
 Emine Küçükbenli, Ask H Larsen, Alfio Lazzaro, Irina V Lebedeva, Yingzhou Li, David López-Durán, Pablo López-Tarifa, Martin Lüders,
 Miguel AL Marques, Jan Minar, Stephan Mohr, Arash A Mostofi, Alan O’Cais, Mike C Payne, Thomas Ruh, Daniel GA Smith, José M Soler,
 David A Strubbe, Nicolas Tancogne-Dejean, Dominic Tildesley, Marc Torrent, Victor Wen-zhe Yu, *The CECAM electronic structure library and the modular software development paradigm*,
-  The Journal of Chemical Physics 153 (2), 024117, DOI:https://doi.org/10.1063/5.0012901
-- A Diver, O Dicks, IT Todorov, AM Elena, K Trachenko, *Radiation damage effects in amorphous zirconolite*,
-  Journal of Nuclear Materials 544, 152654, DOI:https://doi.org/10.1016/j.jnucmat.2020.152654
-- A Diver, O Dicks, AM Elena, IT Todorov, K Trachenko, *Evolution of amorphous structure under irradiation: zircon case study*
-  Journal of Physics: Condensed Matter 32 (41), 415703, DOI:https://doi.org/10.1088/1361-648X/ab9f51
+  The Journal of Chemical Physics 2020, 153 (2), 024117, DOI: https://doi.org/10.1063/5.0012901
+- A Diver, O Dicks, AM Elena, IT Todorov, K Trachenko, 2020, *Evolution of amorphous structure under irradiation: zircon case study*
+  Journal of Physics: Condensed Matter 32 (41), 415703, DOI: https://doi.org/10.1088/1361-648X/ab9f51
 - I Scivetti, K Sen, AM Elena, I Todorov, *Reactive Molecular Dynamics at Constant Pressure via Nonreactive Force Fields: Extending the Empirical Valence Bond Method to the Isothermal-Isobaric Ensemble*
-  The Journal of Physical Chemistry A 124 (37), 7585-7597, DOI:https://doi.org/10.1021/acs.jpca.0c05461
+  The Journal of Physical Chemistry A 2020, 124 (37), 7585-7597, DOI: https://doi.org/10.1021/acs.jpca.0c05461
 - Janou A Koskamp, Sergio E Ruiz-Hernandez, Devis Di Tommaso, Alin Marin Elena, Nora H De Leeuw, Mariette Wolthers, *Reconsidering Calcium Dehydration as the Rate-Determining Step in Calcium Mineral Growth*\
-  The Journal of Physical Chemistry C, 2019 **123** (44), 26895-26903, DOI:https://doi.org/10.1021/acs.jpcc.9b06403
+  The Journal of Physical Chemistry C, 2019 **123** (44), 26895-26903, DOI: https://doi.org/10.1021/acs.jpcc.9b06403
 - Martyn F. Guest, Aidan B. G. Chalk and Alin M. Elena *DL_POLY - A performance overview analysing, understanding and exploiting available HPC technology* Molecular Simulation, 2019\
-  DOI:https://doi.org/10.1080/08927022.2019.1603380
+  DOI: https://doi.org/10.1080/08927022.2019.1603380
 - Aidan B. G. Chalk and Alin M. Elena *Task-Based Parallelism with OpenMP: a case study with DL_POLY_4* Molecular Simulations, 2019\
-  DOI:https://doi.org/10.1080/08927022.2019.1606424
+  DOI: https://doi.org/10.1080/08927022.2019.1606424
 - Aidan B.G. Chalk, Alin M. Elena, *Task Based Parallelism with OpenMP: A Case Study with DL_POLY_4* chapter in Volume 32: Parallel Computing is Everywhere\
-  pages: 497 - 506, DOI: 10.3233/978-1-61499-843-3-497
+  pages: 497 - 506, DOI:  10.3233/978-1-61499-843-3-497
 - Christian Trott, Tzu-Ray Shan, Stan Moore, Aidan Thompson, Steve Plimpton, Markus Höhnerbach, Ahmed Ismail, Paolo Bientinesi, Alin Marin Elena, Christian Lalanne, Victor Gamayunov, Gilles Civario, Michael Lysaght, Ilian Todorov, Iain Bethune, Antonia Collis, Gianpaolo Gobbo, Benedict Leimkuhler, Sapna Sarupria, Walter Hanger, Ryan DeFever, Linh Ngo, Amy Apon, Jesús Izaguirre, Douglas Thain, Eric Darve, Roberto Di Remigio, Daniel Crawford, Luca Frediani, Erik Lindahl, James Phillips, Ross Walker\
   Proceedings of the SC15 Workshop on Producing High Performance and Sustainable Software for Molecular Simulation, 2016
 - Alin Marin Elena and Ivan Rungger. *Enabling Smeagol on Xeon Phi: Lessons Learned.* PRACE White Paper, 2014\
    www.prace-ri.eu/IMG/pdf/wp134.pdf
 - Alin Marin Elena, Simone Meloni and Giovanni Ciccotti *Equilibrium and Rate Constants, and Reaction Mechanism of the HF Dissociation in the HF(H2O)7 Cluster by ab Initio Rare Event Simulations* J. Phys. Chem. A 2013 **117**, 49, 13039-13050\
-  DOI:https://doi.org/10.1021/jp406982h
+  DOI: https://doi.org/10.1021/jp406982h
 - A.T. Paxton, T.N. Todorov and A.M. Elena *Ring currents in azulene* Chemical Physics Letters **483**(1–3), 2009, Pages 154-158 \
-  DOI:https://doi.org/10.1016/j.cplett.2009.10.041
+  DOI: https://doi.org/10.1016/j.cplett.2009.10.041
 - Alin M. Elena and Matthias Meister *Automatic generation of matrix element derivatives for tight binding models* Phys. Rev. B **72**, 165107, 2005 \
-  DOI:https://doi.org/10.1103/PhysRevB.72.165107
+  DOI: https://doi.org/10.1103/PhysRevB.72.165107
 
 ## Presentations
 
