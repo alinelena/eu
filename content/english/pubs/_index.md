@@ -4,6 +4,12 @@ title:       "Publications"
 
 ## Papers
 
+- Micael JT Oliveira, Nick Papior, Yann Pouillon, Volker Blum, Emilio Artacho, Damien Caliste, Fabiano Corsetti, Stefano De
+  Gironcoli, Alin M Elena, Alberto García, Víctor M García-Suárez, Luigi Genovese, William P Huhn, Georg Huhs, Sebastian Kokott,
+Emine Küçükbenli, Ask H Larsen, Alfio Lazzaro, Irina V Lebedeva, Yingzhou Li, David López-Durán, Pablo López-Tarifa, Martin Lüders,
+Miguel AL Marques, Jan Minar, Stephan Mohr, Arash A Mostofi, Alan O’Cais, Mike C Payne, Thomas Ruh, Daniel GA Smith, José M Soler,
+David A Strubbe, Nicolas Tancogne-Dejean, Dominic Tildesley, Marc Torrent, Victor Wen-zhe Yu, *The CECAM electronic structure library and the modular software development paradigm*,
+  The Journal of Chemical Physics 153 (2), 024117, DOI:https://doi.org/10.1063/5.0012901
 - A Diver, O Dicks, IT Todorov, AM Elena, K Trachenko, *Radiation damage effects in amorphous zirconolite*,
   Journal of Nuclear Materials 544, 152654, DOI:https://doi.org/10.1016/j.jnucmat.2020.152654
 - A Diver, O Dicks, AM Elena, IT Todorov, K Trachenko, *Evolution of amorphous structure under irradiation: zircon case study*
