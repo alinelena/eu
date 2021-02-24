@@ -4,8 +4,14 @@ title:       "Publications"
 
 ## Papers
 
+- A Diver, O Dicks, IT Todorov, AM Elena, K Trachenko, *Radiation damage effects in amorphous zirconolite*,
+  Journal of Nuclear Materials 544, 152654, DOI:https://doi.org/10.1016/j.jnucmat.2020.152654
+- A Diver, O Dicks, AM Elena, IT Todorov, K Trachenko, *Evolution of amorphous structure under irradiation: zircon case study*
+  Journal of Physics: Condensed Matter 32 (41), 415703, DOI:https://doi.org/10.1088/1361-648X/ab9f51
+- I Scivetti, K Sen, AM Elena, I Todorov, *Reactive Molecular Dynamics at Constant Pressure via Nonreactive Force Fields: Extending the Empirical Valence Bond Method to the Isothermal-Isobaric Ensemble*
+  The Journal of Physical Chemistry A 124 (37), 7585-7597, DOI:https://doi.org/10.1021/acs.jpca.0c05461
 - Janou A Koskamp, Sergio E Ruiz-Hernandez, Devis Di Tommaso, Alin Marin Elena, Nora H De Leeuw, Mariette Wolthers, *Reconsidering Calcium Dehydration as the Rate-Determining Step in Calcium Mineral Growth*\
-  The Journal of Physical Chemistry C, 2019 **123** (44), 26895-26903
+  The Journal of Physical Chemistry C, 2019 **123** (44), 26895-26903, DOI:https://doi.org/10.1021/acs.jpcc.9b06403
 - Martyn F. Guest, Aidan B. G. Chalk and Alin M. Elena *DL_POLY - A performance overview analysing, understanding and exploiting available HPC technology* Molecular Simulation, 2019\
   DOI:https://doi.org/10.1080/08927022.2019.1603380
 - Aidan B. G. Chalk and Alin M. Elena *Task-Based Parallelism with OpenMP: a case study with DL_POLY_4* Molecular Simulations, 2019\
@@ -26,11 +32,11 @@ title:       "Publications"
 ## Presentations
 
 - talk, A M Elena, IPCC Users' Group meeting, Dublin, February 25, 2015
-- talk, A M Elena, CECAM: Exploiting heterogeneous multi-core and many-core platforms for atomic and molecular simulations, STFC Hartree Centre, Daresbury, UK, September 11, 2014       
-- poster, A M Elena, S Meloni, G Ciccotti, EU-US HPC Summer School, Dublin.Deprotonation mechanism of (H2O)7HF, June 26, 2012   
-- poster, A M Elena, S Meloni, G Ciccotti, CECAM: Free-Energy Calculations,  École des Ponts et Chaussées, Paris. Deprotonation mechanism of (H2O)7HF, June 6, 2012   
-- talk, A M Elena, S Meloni, G Ciccotti, Nanoscale Simulators Ireland Meeting, Trinity College Dublin.Deprotonation mechanism of hydrofluoric acid(H2O)7HF cluster by ab-initio rare event simulations, January 13, 2012   
-- poster, A M Elena, M Meister, CECAM: Programming Parallel Computers, Jülich, Germany. Automatic Generation of Matrix Element Derivatives for Tight Binding Models, January 2006   
+- talk, A M Elena, CECAM: Exploiting heterogeneous multi-core and many-core platforms for atomic and molecular simulations, STFC Hartree Centre, Daresbury, UK, September 11, 2014
+- poster, A M Elena, S Meloni, G Ciccotti, EU-US HPC Summer School, Dublin.Deprotonation mechanism of (H2O)7HF, June 26, 2012
+- poster, A M Elena, S Meloni, G Ciccotti, CECAM: Free-Energy Calculations,  École des Ponts et Chaussées, Paris. Deprotonation mechanism of (H2O)7HF, June 6, 2012
+- talk, A M Elena, S Meloni, G Ciccotti, Nanoscale Simulators Ireland Meeting, Trinity College Dublin.Deprotonation mechanism of hydrofluoric acid(H2O)7HF cluster by ab-initio rare event simulations, January 13, 2012
+- poster, A M Elena, M Meister, CECAM: Programming Parallel Computers, Jülich, Germany. Automatic Generation of Matrix Element Derivatives for Tight Binding Models, January 2006
 - talk, M. Elena, M. Bercu, Electron Transfer in Disordered One-dimensional Systems   , Annual Scientific Conference, Faculty of Physics, University of Bucharest,       May 30, 2003
 - talk, M. A. Elena, Mircea Bercu, Simulation of H-H Collision Based on Molecular Dynamics   , Annual Scientific Conference, Faculty of Physics, University of Bucharest,     May 31, 2002
 - talk, V. Barna, A. Elena, D. Nedelcu, Effect of Specimen Thickness on Crystallisation Rate   , Annual Scientific Conference, Faculty of Physics, University of Bucharest,       May 31, 2002
