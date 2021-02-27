@@ -2,8 +2,8 @@
 title: "The lego mechanical keyboard"
 date: 2021-02-20T12:52:36+00:00
 author: ame
-image_webp: images/blog/m65-layout.webp
-image: images/blog/m65-layout.png
+image_webp: images/blog/m65-final.webp
+image: images/blog/m65-final.png
 description : "The mechanical keyboard madness almost there"
 ---
 
@@ -66,8 +66,15 @@ oem keycaps blanks from all over but mainly carbon set from ymdk.
 
 here is the almost final version in /dev/tty
 
-{{< figure src="/images/blog/m65-tty.png" title="m65 first pcb lego oem keycaps, February 2021" width="700px">}}
+{{< figure src="/images/blog/m65-tty.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 
+the final version with right colours:
+
+{{< figure src="/images/blog/m65-final.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
+
+the layout is iso uk inspired, i kept the same rows so I do not have too many issues with the keycaps.
+
+{{< figure src="/images/blog/m65-layout.png" title="m65 layout, February 2021" width="700px">}}
 
 another build with susuwatari will follow for my girlfriend to try the ortholinear...
 
