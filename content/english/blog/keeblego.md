@@ -93,10 +93,7 @@ switches and keycaps as you please...
 
 you can comment in here... https://www.reddit.com/r/olkb/comments/lntirw/finally_all_in_lego/
 
-for the price of postage and production cost (£5) I can part with 2 of each of the pcb 5x13 or 6x13.
-
 fun facts... the lego plate needed is 32x16 in lego studs, in mm 256x128... if you like numbers you spot the pattern...
 
 **note**: pictures are horrible mainly as an anti-thesis to all the glamorous shots one sees on reddit..
-maybe one day I will publish the pictures I took with my Nikon D610
 
