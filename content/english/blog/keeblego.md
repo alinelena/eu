@@ -37,11 +37,14 @@ I decided to use the lego for the box too and do the unholly thing to glue the p
 
 Later I noticed the ortholinear it intrigued me by I was afraid to try...
 Late 2019 i started to toy with the idea and build a hand wired 6x13 ortholinear.
+
+{{< figure src="/images/blog/m78.jpg" title="m78 handwired, 2020" width="700px">}}
+
 I liked it... then when lockdown started I thought let me do a pcb... I seen plaid and I liked the THT idea.
 
 Learnt kicad and ended up with this...
 
-{{< figure src="/images/blog/m78.jpg" title="m78 first pcb plate mounted, January 2021" width="700px">}}
+{{< figure src="/images/blog/m78-pcb.jpg" title="m78 first pcb plate mounted, January 2021" width="700px">}}
 
 not bad but something is missing. For once I notices 6 rows are too many and glueing that plate on lego
 really was a blasphemy... so why not lego holes in the PCB directly?
