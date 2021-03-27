@@ -75,13 +75,18 @@ the final version with right colours:
 
 {{< figure src="/images/blog/m65-final.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 
+this is another with susuwatari
+
+
+{{< figure src="/images/blog/m65-susu.jpg" title="m65 pcb lego mt3 susuwatari keycaps, March 2021" width="700px">}}
+
 the layout is iso uk inspired, i kept the same rows so I do not have too many issues with the keycaps.
 
 {{< figure src="/images/blog/m65-layout.png" title="m65 layout, February 2021" width="700px">}}
 
 another build with susuwatari will follow for my girlfriend to try the ortholinear...
 
-the firmware is qmk: https://github.com/alinelena/qmk_firmware/tree/m78 I hope to contribute it back
+the firmware is qmk: https://github.com/alinelena/qmk_firmware/tree/m65-dev I hope to contribute it back
 
 the mcu is: Black Pill APM32F103CB 128KB from robotdyn
 
