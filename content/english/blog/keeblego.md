@@ -74,7 +74,7 @@ here is the almost final version in /dev/tty
 the final version with right colours:
 
 {{< figure src="/images/blog/m65-final.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
-{{< figure src="/images/blog/m65-home.png" title="m65 second pcb lego /dev/tty keycaps, February 2021" width="700px">}}
+{{< figure src="/images/blog/m65-home.jpg" title="m65 second pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 
 this is another with susuwatari
 
