@@ -71,15 +71,22 @@ here is the almost final version in /dev/tty
 
 {{< figure src="/images/blog/m65-tty.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 
-the final version with right colours:
+the final version with right colours(MT3 /dev/tty bleached v2 and kailh box crystal royal) :
 
 {{< figure src="/images/blog/m65-final.png" title="m65 first pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 {{< figure src="/images/blog/m65-home.jpg" title="m65 second pcb lego /dev/tty keycaps, February 2021" width="700px">}}
 
-this is another with susuwatari
 
+this is another with mt3 susuwatari and kailh box crystal jade (third )
 
 {{< figure src="/images/blog/m65-susu.jpg" title="m65 pcb lego mt3 susuwatari keycaps, March 2021" width="700px">}}
+
+fourth is waiting keycaps (nk blueberry)
+
+
+fifth is waiting keycaps (gateron ink v2 silents - yellow and red)
+
+
 
 the layout is iso uk inspired, i kept the same rows so I do not have too many issues with the keycaps.
 
