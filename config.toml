@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://alin.elena.re"
+baseURL = "https://alinelena.github.io/eu/"
 title = "Alin M Elena"
 theme = "meghna-hugo"
 # post pagination
