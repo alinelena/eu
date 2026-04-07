@@ -44,22 +44,15 @@
 
     
     <!-- Language List -->
-    {{- if gt (len site.Languages) 1 }}
+    {{- if gt (len hugo.Sites) 1 }}
     <select id="select-language" onchange="location = this.value;">
-      {{ $siteLanguages := site.Languages}}
-      {{ $pageLang := .Page.Lang}}
+      {{ $pageLang := .Page.Language.Lang }}
       {{ range .Page.AllTranslations }}
-      {{ $translation := .}}
-      {{ range $siteLanguages }}
-      {{ if eq $translation.Lang .Lang }}
-      {{ $selected := false }}
-      {{ if eq $pageLang .Lang}}
-      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
+      {{ if eq $pageLang .Language.Lang }}
+      <option id="{{ .Language.Lang }}" value="{{ .Permalink }}" selected>{{ .Language.LanguageName }}
       </option>
       {{ else }}
-      <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-      {{ end }}
-      {{ end }}
+      <option id="{{ .Language.Lang }}" value="{{ .Permalink }}">{{ .Language.LanguageName }}</option>
       {{ end }}
       {{ end }}
     </select>
