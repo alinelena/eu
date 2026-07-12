@@ -113,9 +113,9 @@ link = "https://www.linkedin.com/in/alin-elena-9a5b9b68/"
 
 
 ################################ English Language ########################
-[Languages.en]
-languageName = "En"
-languageCode = "en-us"
+[languages.en]
+label = "En"
+locale = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
