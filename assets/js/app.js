@@ -62,15 +62,31 @@
       logoImg.alt = site.title || "Logo";
     }
 
+    const defaultColors = [
+      "#57cbcc",
+      "#6cb670",
+      "#fbbf24",
+      "#818cf8",
+      "#f472b6",
+      "#fb923c",
+      "#2dd4bf",
+    ];
+
     if (navList && Array.isArray(site.menu)) {
       navList.innerHTML = site.menu
         .map((item, idx) => {
           const matches = Array.isArray(item.match_sections)
             ? item.match_sections.join(",")
             : item.url;
+          const color = item.color || defaultColors[idx % defaultColors.length];
           return `
             <li>
-              <a class="corner-nav-link ${idx === 0 ? "active" : ""}" href="${item.url}" data-nav-target="${item.url}" data-nav-matches="${matches}">
+              <a class="corner-nav-link ${idx === 0 ? "active" : ""}"
+                 href="${item.url}"
+                 data-nav-target="${item.url}"
+                 data-nav-matches="${matches}"
+                 data-item-color="${color}"
+                 style="--nav-item-color: ${color};">
                 <i class="bi ${item.icon || "bi-circle"}"></i>
                 <span>${item.name}</span>
               </a>
@@ -566,17 +582,31 @@
     }
 
     if (footerContainer && site) {
+      const defaultPillColors = [
+        "#57cbcc",
+        "#a6ce39",
+        "#4285f4",
+        "#c9d1d9",
+        "#fc6d26",
+        "#0a66c2",
+        "#ff3344",
+      ];
+
       footerContainer.innerHTML = `
         <div class="d-flex justify-content-center flex-wrap gap-3 mb-3">
           ${(site.social || [])
-            .map(
-              (s) => `
-            <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="btn-ddmms-outline btn-sm rounded-pill px-3" title="${s.name}">
+            .map((s, idx) => {
+              const color = s.color || defaultPillColors[idx % defaultPillColors.length];
+              return `
+            <a href="${s.url}" target="_blank" rel="noopener noreferrer"
+               class="btn-social-pill btn-sm rounded-pill px-3 py-2"
+               title="${s.name}"
+               style="--pill-color: ${color};">
               <i class="bi ${s.icon}"></i>
               <span>${s.name}</span>
             </a>
-          `
-            )
+          `;
+            })
             .join("")}
         </div>
         <div class="text-secondary small">
@@ -718,6 +748,10 @@
               link.classList.toggle("active", isMatch);
               if (isMatch && currentSectionLabel) {
                 currentSectionLabel.textContent = link.textContent.trim();
+                const itemColor = link.getAttribute("data-item-color");
+                if (itemColor) {
+                  currentSectionLabel.style.color = itemColor;
+                }
               }
             });
           }
