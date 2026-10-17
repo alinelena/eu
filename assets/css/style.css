@@ -585,9 +585,24 @@ a:hover {
   height: 1.5rem;
   border-radius: 50%;
   background: var(--bg-primary);
-  border: 3px solid var(--accent-cyan);
-  box-shadow: 0 0 0 5px rgba(87, 203, 204, 0.16);
+  border: 3px solid var(--item-color, var(--accent-cyan));
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 20%, transparent),
+              0 0 14px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 35%, transparent);
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-marker::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--item-color, var(--accent-cyan));
+  box-shadow: 0 0 6px var(--item-color, var(--accent-cyan));
+  transition: transform 0.22s ease;
 }
 
 .timeline-item.timeline-left .timeline-marker {
@@ -600,9 +615,13 @@ a:hover {
   transform: translateX(10px);
 }
 
-.timeline-item[data-category="education"] .timeline-marker {
-  border-color: var(--accent-green);
-  box-shadow: 0 0 0 5px rgba(108, 182, 112, 0.16);
+.timeline-item:hover .timeline-marker {
+  box-shadow: 0 0 0 7px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 32%, transparent),
+              0 0 20px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 55%, transparent);
+}
+
+.timeline-item:hover .timeline-marker::after {
+  transform: scale(1.4);
 }
 
 .timeline-card {
@@ -617,13 +636,13 @@ a:hover {
 .timeline-item.timeline-left .timeline-card:hover {
   transform: translateX(-4px);
   background: var(--bg-card-hover);
-  border-color: var(--border-accent);
+  border-color: var(--item-color, var(--border-accent));
 }
 
 .timeline-item.timeline-right .timeline-card:hover {
   transform: translateX(4px);
   background: var(--bg-card-hover);
-  border-color: var(--border-accent);
+  border-color: var(--item-color, var(--border-accent));
 }
 
 @media (max-width: 767.98px) {
@@ -661,7 +680,7 @@ a:hover {
 .timeline-period {
   font-family: "Anaheim", monospace;
   font-size: 0.92rem;
-  color: var(--accent-cyan);
+  color: var(--item-color, var(--accent-cyan));
   font-weight: 600;
   letter-spacing: 0.03em;
 }

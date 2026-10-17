@@ -185,6 +185,18 @@
     `;
   }
 
+  const cvPointColors = [
+    "#57cbcc",
+    "#2dd4bf",
+    "#6cb670",
+    "#a3e635",
+    "#fbbf24",
+    "#fb923c",
+    "#f472b6",
+    "#c084fc",
+    "#818cf8",
+  ];
+
   function drawTimelineWave() {
     const timelineEl = document.getElementById("cv-timeline-list");
     const svgEl = document.getElementById("cv-timeline-wave");
@@ -199,6 +211,8 @@
     svgEl.setAttribute("viewBox", `0 0 ${width} ${totalHeight}`);
 
     const items = Array.from(timelineEl.querySelectorAll(".timeline-item"));
+    if (items.length === 0) return;
+
     const points = [{ x: centerX, y: 0 }];
 
     items.forEach((item, idx) => {
@@ -221,6 +235,28 @@
     const pathEl = svgEl.querySelector("path");
     if (pathEl) {
       pathEl.setAttribute("d", d);
+      pathEl.setAttribute("stroke", "url(#timelineWaveGrad)");
+    }
+
+    // Dynamic gradient stops transitioning between point colors along the path
+    const gradEl = svgEl.querySelector("#timelineWaveGrad");
+    if (gradEl) {
+      const firstColor = items[0].getAttribute("data-item-color") || "#57cbcc";
+      const lastColor = items[items.length - 1].getAttribute("data-item-color") || "#818cf8";
+      const stops = [];
+
+      stops.push(`<stop offset="0%" stop-color="${firstColor}" />`);
+
+      items.forEach((item) => {
+        const marker = item.querySelector(".timeline-marker");
+        const markerY = item.offsetTop + (marker ? marker.offsetTop + marker.offsetHeight / 2 : 36);
+        const color = item.getAttribute("data-item-color") || firstColor;
+        const pct = Math.max(0, Math.min(100, (markerY / totalHeight) * 100)).toFixed(2);
+        stops.push(`<stop offset="${pct}%" stop-color="${color}" />`);
+      });
+
+      stops.push(`<stop offset="100%" stop-color="${lastColor}" />`);
+      gradEl.innerHTML = stops.join("");
     }
   }
 
@@ -236,8 +272,9 @@
         const badgeClass = isEdu ? "badge-education" : "badge-employment";
         const iconClass = isEdu ? "bi-mortarboard-fill" : "bi-briefcase-fill";
         const sideClass = idx % 2 === 0 ? "timeline-left" : "timeline-right";
+        const color = ev.color || cvPointColors[idx % cvPointColors.length];
         return `
-          <div class="timeline-item ${sideClass}" data-category="${ev.category}">
+          <div class="timeline-item ${sideClass}" data-category="${ev.category}" data-item-color="${color}" style="--item-color: ${color};">
             <div class="timeline-marker" title="${ev.type_label}"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
@@ -267,8 +304,7 @@
         <defs>
           <linearGradient id="timelineWaveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#57cbcc" />
-            <stop offset="55%" stop-color="#6cb670" />
-            <stop offset="100%" stop-color="#57cbcc" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#818cf8" />
           </linearGradient>
         </defs>
         <path d="" fill="none" stroke="url(#timelineWaveGrad)" stroke-width="3" stroke-linecap="round" />
@@ -305,6 +341,9 @@
 
     requestAnimationFrame(drawTimelineWave);
     window.addEventListener("resize", drawTimelineWave, { passive: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(drawTimelineWave);
+    }
 
     container.querySelectorAll("[data-cv-filter]").forEach((btn) => {
       btn.addEventListener("click", () => {
