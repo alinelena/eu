@@ -65,40 +65,12 @@
     if (navList && Array.isArray(site.menu)) {
       navList.innerHTML = site.menu
         .map((item, idx) => {
-          if (Array.isArray(item.children) && item.children.length > 0) {
-            const subId = `corner-subnav-${idx}`;
-            return `
-              <li class="corner-nav-group">
-                <button
-                  type="button"
-                  class="corner-nav-link corner-nav-group-toggle"
-                  aria-expanded="false"
-                  aria-controls="${subId}"
-                >
-                  <i class="bi ${item.icon || "bi-folder"}"></i>
-                  <span>${item.name}</span>
-                  <i class="bi bi-chevron-down chevron-icon"></i>
-                </button>
-                <ul id="${subId}" class="corner-subnav-list">
-                  ${item.children
-                    .map(
-                      (child) => `
-                    <li>
-                      <a class="corner-nav-link" href="${child.url}" data-nav-target="${child.url}">
-                        <i class="bi ${child.icon || "bi-circle"}"></i>
-                        <span>${child.name}</span>
-                      </a>
-                    </li>
-                  `
-                    )
-                    .join("")}
-                </ul>
-              </li>
-            `;
-          }
+          const matches = Array.isArray(item.match_sections)
+            ? item.match_sections.join(",")
+            : item.url;
           return `
             <li>
-              <a class="corner-nav-link ${idx === 0 ? "active" : ""}" href="${item.url}" data-nav-target="${item.url}">
+              <a class="corner-nav-link ${idx === 0 ? "active" : ""}" href="${item.url}" data-nav-target="${item.url}" data-nav-matches="${matches}">
                 <i class="bi ${item.icon || "bi-circle"}"></i>
                 <span>${item.name}</span>
               </a>
@@ -698,19 +670,6 @@
     });
 
     panel.addEventListener("click", (e) => {
-      const groupToggle = e.target.closest(".corner-nav-group-toggle");
-      if (groupToggle) {
-        e.stopPropagation();
-        const isExpanded = groupToggle.getAttribute("aria-expanded") === "true";
-        const subId = groupToggle.getAttribute("aria-controls");
-        const subList = subId ? document.getElementById(subId) : null;
-        groupToggle.setAttribute("aria-expanded", String(!isExpanded));
-        if (subList) {
-          subList.classList.toggle("show", !isExpanded);
-        }
-        return;
-      }
-
       const link = e.target.closest("a[href^='#']");
       if (link) {
         closeMenu();
@@ -738,25 +697,13 @@
           if (entry.isIntersecting) {
             const id = `#${entry.target.id}`;
             document.querySelectorAll(".corner-nav-link").forEach((link) => {
-              const isMatch = link.getAttribute("href") === id;
+              const matches = (link.getAttribute("data-nav-matches") || link.getAttribute("href") || "")
+                .split(",")
+                .map((s) => s.trim());
+              const isMatch = matches.includes(id);
               link.classList.toggle("active", isMatch);
               if (isMatch && currentSectionLabel) {
                 currentSectionLabel.textContent = link.textContent.trim();
-              }
-            });
-
-            document.querySelectorAll(".corner-nav-group").forEach((group) => {
-              const hasActiveChild = Boolean(
-                group.querySelector(".corner-subnav-list .corner-nav-link.active")
-              );
-              const groupBtn = group.querySelector(".corner-nav-group-toggle");
-              const subList = group.querySelector(".corner-subnav-list");
-              if (groupBtn) {
-                groupBtn.classList.toggle("active", hasActiveChild);
-                if (hasActiveChild) {
-                  groupBtn.setAttribute("aria-expanded", "true");
-                  if (subList) subList.classList.add("show");
-                }
               }
             });
           }
