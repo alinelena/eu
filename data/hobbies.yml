@@ -6,7 +6,7 @@ items:
   - name: "mlego — Custom LEGO Mechanical Keyboards"
     badge: "Keyboards & PCB Design"
     icon: "bi-keyboard"
-    image_webp: "images/blog/m65-final.webp"
+    image_webp: "https://mlego.elena.re/pics/m66/mlego_m66_rev4-lcd.webp"
     image: "images/blog/m65-final.png"
     description: "Design notes, custom KiCad PCBs with direct LEGO stud mounting holes, hand-wired prototypes, QMK/Vial firmware, and switch experiments for ortholinear mechanical keyboards."
     url: "https://mlego.elena.re"
