@@ -1,0 +1,22 @@
+enable: true
+title: "Hobbies & Projects"
+subtitle: "Hardware tinkering, custom mechanical keyboards & home automation"
+
+items:
+  - name: "mlego — Custom LEGO Mechanical Keyboards"
+    badge: "Keyboards & PCB Design"
+    icon: "bi-keyboard"
+    image_webp: "images/blog/m65-final.webp"
+    image: "images/blog/m65-final.png"
+    description: "Design notes, custom KiCad PCBs with direct LEGO stud mounting holes, hand-wired prototypes, QMK/Vial firmware, and switch experiments for ortholinear mechanical keyboards."
+    url: "https://mlego.elena.re"
+    link_label: "Explore mlego.elena.re"
+
+  - name: "IoT & Smart Home Automation"
+    badge: "ESPHome & Sensors"
+    icon: "bi-cpu-fill"
+    image_webp: "images/news/automation.webp"
+    image: "images/news/automation.jpg"
+    description: "DIY home automation and environmental sensing built around ESPHome, ESP8266/ESP32 microcontrollers, Zigbee (ConBee II), Xiaomi sensors, and smart lighting."
+    url: "https://gitlab.com/48broadbent/broadbent"
+    link_label: "View on GitLab (48broadbent)"

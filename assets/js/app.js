@@ -8,6 +8,7 @@
     about: "data/about.yml",
     cv: "data/cv.yml",
     researchPubs: "data/research_pubs.yml",
+    hobbies: "data/hobbies.yml",
     news: "data/news.yml",
     posts: "data/posts.yml",
     contact: "data/contact.yml",
@@ -321,6 +322,51 @@
         </div>
       `;
     }
+  }
+
+  function renderHobbies(hobbies) {
+    const container = document.getElementById("hobbies-container");
+    if (!container || !hobbies || !hobbies.enable) return;
+
+    container.innerHTML = `
+      ${renderSectionHeader(hobbies.title, hobbies.subtitle)}
+      <div class="row g-4 justify-content-center">
+        ${(hobbies.items || [])
+          .map(
+            (item) => `
+          <div class="col-md-6">
+            <article class="post-card">
+              <img
+                src="${item.image_webp || item.image}"
+                onerror="this.onerror=null;this.src='${item.image}';"
+                alt="${item.name}"
+                class="post-card-img"
+                loading="lazy"
+              >
+              <div class="post-card-body">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="timeline-badge badge-employment">
+                    <i class="bi ${item.icon || "bi-tools"} me-1"></i>${item.badge || "Hobby"}
+                  </span>
+                </div>
+                <h3 class="h5 text-white mb-2">${item.name}</h3>
+                <p class="text-secondary small flex-grow-1 mb-3">
+                  ${item.description || ""}
+                </p>
+                <div class="mt-auto">
+                  <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn-ddmms-outline btn-sm">
+                    <span>${item.link_label || "Explore"}</span>
+                    <i class="bi bi-box-arrow-up-right small"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        `
+          )
+          .join("")}
+      </div>
+    `;
   }
 
   function renderNews(news) {
@@ -682,6 +728,7 @@
         about,
         cv,
         researchPubs,
+        hobbies,
         news,
         posts,
         contact,
@@ -690,6 +737,7 @@
         fetchYaml(DATA_FILES.about),
         fetchYaml(DATA_FILES.cv),
         fetchYaml(DATA_FILES.researchPubs),
+        fetchYaml(DATA_FILES.hobbies),
         fetchYaml(DATA_FILES.news),
         fetchYaml(DATA_FILES.posts),
         fetchYaml(DATA_FILES.contact),
@@ -700,6 +748,7 @@
         about,
         cv,
         researchPubs,
+        hobbies,
         news,
         posts,
         contact,
@@ -711,6 +760,7 @@
       renderAbout(about);
       renderCv(cv);
       renderResearchAndPubs(researchPubs);
+      renderHobbies(hobbies);
       renderNews(news);
       renderPosts(posts);
       renderContact(contact, site);
