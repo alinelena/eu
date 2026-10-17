@@ -18,3 +18,4 @@ map:
   enable: true
   embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=-2.642276287078858%2C53.342830319780994%2C-2.6397657394409184%2C53.343810333203045&layer=mapnik&marker=53.343320329307545%2C-2.6410210132598877"
   larger_map_url: "https://www.openstreetmap.org/?mlat=53.34332&mlon=-2.64102#map=19/53.34332/-2.64102"
+
