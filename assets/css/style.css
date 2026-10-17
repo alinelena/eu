@@ -169,8 +169,9 @@ a:hover {
   gap: 0.75rem;
   padding: 0.55rem 0.85rem;
   border-radius: 0.6rem;
-  color: var(--text-secondary);
+  color: var(--nav-item-color, var(--text-secondary));
   font-size: 0.95rem;
+  font-weight: 500;
   transition: all 0.18s ease;
   border-left: 3px solid transparent;
 }
@@ -185,7 +186,8 @@ a:hover {
 
 .corner-nav-link:hover {
   background: color-mix(in srgb, var(--nav-item-color, var(--accent-cyan)) 14%, transparent);
-  color: #fff;
+  color: var(--nav-item-color, #fff);
+  filter: brightness(1.2);
 }
 
 .corner-nav-link:hover i {
@@ -195,8 +197,9 @@ a:hover {
 .corner-nav-link.active {
   background: color-mix(in srgb, var(--nav-item-color, var(--accent-cyan)) 18%, transparent);
   border-left-color: var(--nav-item-color, var(--accent-green));
-  color: #fff;
+  color: var(--nav-item-color, #fff);
   font-weight: 600;
+  filter: brightness(1.25);
 }
 
 .corner-nav-link.active i {
@@ -770,7 +773,7 @@ a:hover {
 
 .btn-social-pill {
   background: color-mix(in srgb, var(--pill-color, #57cbcc) 8%, rgba(255, 255, 255, 0.03));
-  color: var(--text-primary);
+  color: var(--pill-color, var(--text-primary));
   border: 1px solid color-mix(in srgb, var(--pill-color, #57cbcc) 35%, transparent);
   border-radius: 50rem;
   padding: 0.45rem 1.15rem;
@@ -778,6 +781,7 @@ a:hover {
   align-items: center;
   gap: 0.55rem;
   font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.22s ease;
 }
@@ -791,7 +795,8 @@ a:hover {
 .btn-social-pill:hover {
   background: color-mix(in srgb, var(--pill-color, #57cbcc) 20%, transparent);
   border-color: var(--pill-color, #57cbcc);
-  color: #fff;
+  color: var(--pill-color, #fff);
+  filter: brightness(1.18);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px color-mix(in srgb, var(--pill-color, #57cbcc) 30%, transparent);
 }
