@@ -84,8 +84,8 @@
     const navList = document.getElementById("corner-nav-list");
     const logoImg = document.getElementById("corner-btn-logo");
 
-    if (site.logo && logoImg) {
-      logoImg.src = site.logo;
+    if ((site.logo_webp || site.logo) && logoImg) {
+      logoImg.src = site.logo_webp || site.logo;
       logoImg.alt = site.title || "Logo";
     }
 
@@ -137,8 +137,8 @@
     heroContainer.innerHTML = `
       <div class="hero-pulse-badge">
         ${
-          site.logo
-            ? `<img src="${site.logo}" alt="${b.title || site.title}">`
+          site.logo_webp || site.logo
+            ? `<img src="${site.logo_webp || site.logo}" alt="${b.title || site.title}">`
             : `<i class="bi bi-activity"></i>`
         }
       </div>
