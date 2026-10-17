@@ -15,9 +15,9 @@ items:
   - name: "IoT & Smart Home Automation"
     badge: "ESPHome & Sensors"
     icon: "bi-cpu-fill"
-    image_webp: "images/news/automation.webp"
-    image: "images/news/automation.jpg"
+    image_webp: "https://iot.elena.re/pics/eink.jpg"
+    image: "https://iot.elena.re/pics/eink.jpg"
     description: "DIY home automation and environmental sensing built around ESPHome, ESP8266/ESP32 microcontrollers, Zigbee (ConBee II), Xiaomi sensors, and smart lighting."
-    url: "https://gitlab.com/48broadbent/broadbent"
-    link_label: "View on GitLab (48broadbent)"
+    url: "https://iot.elena.re"
+    link_label: "Explore iot.elena.re"
 

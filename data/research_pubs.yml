@@ -11,6 +11,10 @@ research:
     label: "Dr. Alin Marin Elena @ DDMMS"
     url: "https://ddmms.elena.re/alin-marin-elena.html"
     icon: "bi-person-workspace"
+  cmms_link:
+    label: "CMMS @ STFC"
+    url: "https://www.sc.stfc.ac.uk/research-and-expertise/computational-materials-and-molecular-science/"
+    icon: "bi-building"
   highlights:
     - title: "Foundation Machine-Learned Interatomic Potentials"
       icon: "bi-diagram-3"

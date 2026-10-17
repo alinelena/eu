@@ -298,6 +298,14 @@
                     </a>`
                   : ""
               }
+              ${
+                r.cmms_link
+                  ? `<a href="${r.cmms_link.url}" target="_blank" rel="noopener noreferrer" class="btn-ddmms-outline">
+                      <i class="bi ${r.cmms_link.icon || "bi-building"}"></i>
+                      <span>${r.cmms_link.label}</span>
+                    </a>`
+                  : ""
+              }
             </div>
           </div>
         </div>
@@ -372,20 +380,26 @@
             (item) => `
           <div class="col-md-6">
             <article class="post-card">
-              <img
-                src="${item.image_webp || item.image}"
-                onerror="this.onerror=null;this.src='${item.image}';"
-                alt="${item.name}"
-                class="post-card-img"
-                loading="lazy"
-              >
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="d-block overflow-hidden" aria-label="${item.name}">
+                <img
+                  src="${item.image_webp || item.image}"
+                  onerror="this.onerror=null;this.src='${item.image}';"
+                  alt="${item.name}"
+                  class="post-card-img"
+                  loading="lazy"
+                >
+              </a>
               <div class="post-card-body">
                 <div class="d-flex align-items-center justify-content-between mb-2">
                   <span class="timeline-badge badge-employment">
                     <i class="bi ${item.icon || "bi-tools"} me-1"></i>${item.badge || "Hobby"}
                   </span>
                 </div>
-                <h3 class="h5 text-white mb-2">${item.name}</h3>
+                <h3 class="h5 text-white mb-2">
+                  <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">
+                    ${item.name}
+                  </a>
+                </h3>
                 <p class="text-secondary small flex-grow-1 mb-3">
                   ${item.description || ""}
                 </p>
