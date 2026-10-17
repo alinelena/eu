@@ -50,8 +50,8 @@ dividers:
     bg_image_webp: "images/backgrounds/old-wall.webp"
     bg_image: "images/backgrounds/old-wall.jpg"
   after_publications:
-    bg_image_webp: "images/backgrounds/news.webp"
-    bg_image: "images/backgrounds/news.jpg"
+    bg_image_webp: "images/backgrounds/stone-wall-2.webp"
+    bg_image: "images/backgrounds/stone-wall-2.jpg"
   after_posts:
     bg_image_webp: "images/backgrounds/brick-wall-2.webp"
     bg_image: "images/backgrounds/brick-wall-2.jpg"
