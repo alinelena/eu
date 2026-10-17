@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alin M Elena</title>
+  <meta name="description" content="Dr. Alin Marin Elena — Principal Computational Scientist &amp; Group Leader, Data Driven Materials and Molecular Science at STFC Daresbury Laboratory.">
+  <meta name="author" content="Alin M Elena">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Dark Theme Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Floating Corner Navigation Menu -->
+  <nav class="corner-nav-wrapper" aria-label="Site navigation">
+    <button
+      type="button"
+      id="corner-menu-toggle"
+      class="corner-menu-btn"
+      aria-expanded="false"
+      aria-controls="corner-menu-panel"
+      aria-label="Toggle navigation menu"
+    >
+      <img id="corner-btn-logo" src="images/logo.png" alt="Logo" class="brand-avatar">
+      <span id="corner-current-section">Menu</span>
+      <span class="menu-icon-bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <div id="corner-menu-panel" class="corner-menu-panel" role="menu">
+      <div class="d-flex align-items-center justify-content-between px-2 pb-2 mb-2 border-bottom border-secondary border-opacity-25">
+        <span class="fw-bold text-white small text-uppercase" style="letter-spacing: 0.06em;">Navigation</span>
+        <span class="badge bg-dark text-info border border-info border-opacity-25">alin.elena.re</span>
+      </div>
+      <ul id="corner-nav-list" class="corner-nav-list"></ul>
+      <div class="corner-menu-divider"></div>
+      <div class="px-2">
+        <div class="small text-muted text-uppercase mb-2" style="font-size: 0.72rem; letter-spacing: 0.05em;">Quick Links</div>
+        <div id="corner-quick-links" class="corner-quick-links"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Landing Section -->
+  <header>
+    <section id="hero" class="hero-section" style="background-image: url('images/backgrounds/hero.webp');">
+      <div id="hero-content" class="hero-content container">
+        <div class="hero-pulse-badge">
+          <img src="images/logo.png" alt="Alin M Elena">
+        </div>
+        <h1 class="hero-title">Alin M Elena</h1>
+        <p class="hero-subtitle">Computational Scientist • Materials &amp; Molecular Modelling</p>
+        <div>
+          <a href="#about" class="scroll-down-btn">
+            <span>personal site ⇓</span>
+            <i class="bi bi-chevron-double-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section-block">
+      <div id="about-container" class="container"></div>
+    </section>
+
+    <!-- Funfacts / Stats Parallax Section -->
+    <section id="funfacts-section" class="section-block parallax-band d-flex align-items-center" style="height: auto; min-height: 240px; padding: 3.5rem 0;"></section>
+
+    <!-- CV Section (Vertical Linear Timeline: Employment & Education) -->
+    <section id="cv" class="section-block section-bg-alt">
+      <div id="cv-container" class="container"></div>
+    </section>
+
+    <div class="parallax-band" data-divider="after_cv"></div>
+
+    <!-- Research Section (Links to ddmms.elena.re) -->
+    <section id="research" class="section-block">
+      <div id="research-container" class="container"></div>
+    </section>
+
+    <!-- Publications Section (Links to ddmms.elena.re) -->
+    <section id="publications" class="section-block section-bg-alt">
+      <div id="publications-container" class="container"></div>
+    </section>
+
+    <div class="parallax-band" data-divider="after_research"></div>
+
+    <!-- Collaborators Section -->
+    <section id="collaborators" class="section-block">
+      <div id="collaborators-container" class="container"></div>
+    </section>
+
+    <!-- Random News Section -->
+    <section id="news" class="section-block section-bg-alt">
+      <div id="news-container" class="container"></div>
+    </section>
+
+    <!-- Blog / Posts Section -->
+    <section id="posts" class="section-block">
+      <div id="posts-container" class="container"></div>
+    </section>
+
+    <div class="parallax-band" data-divider="after_posts"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-block section-bg-alt">
+      <div id="contact-container" class="container"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-5 border-top border-secondary border-opacity-25 text-center" style="background-color: #0b0e12;">
+    <div id="footer-container" class="container"></div>
+  </footer>
+
+  <!-- Post Reader Modal -->
+  <div class="modal fade" id="postReaderModal" tabindex="-1" aria-labelledby="postModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content" style="background-color: #161c24; border: 1px solid rgba(255,255,255,0.12);">
+        <div class="modal-header border-secondary border-opacity-25">
+          <div>
+            <h2 class="modal-title h4 text-white mb-1" id="postModalTitle"></h2>
+            <div id="postModalMeta" class="small text-muted"></div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-light" id="postModalBody"></div>
+        <div class="modal-footer border-secondary border-opacity-25">
+          <button type="button" class="btn-ddmms-outline btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dependencies: Bootstrap 5 Bundle, js-yaml, marked -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Main Reactive YAML Renderer -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

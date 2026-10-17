@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy Site to GitHub Pages
 
 on:
   push:
@@ -24,23 +24,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+      - name: Validate YAML Data Files
+        run: |
+          python3 -c '
+          import glob, sys, yaml
+          files = sorted(glob.glob("data/*.yml") + glob.glob("data/*.yaml"))
+          assert files, "No YAML files found in data/"
+          for f in files:
+              with open(f, "r", encoding="utf-8") as fh:
+                  yaml.safe_load(fh)
+              print(f"Validated {f}")
+          '
 
-      - name: Build with Hugo
-        run: hugo --minify
+      - name: Prepare site artifact
+        run: |
+          mkdir -p _site
+          cp index.html .nojekyll _site/
+          cp -r assets data images _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./_site
 
   deploy:
     environment:

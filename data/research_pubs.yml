@@ -1,0 +1,49 @@
+research:
+  enable: true
+  title: "Research"
+  subtitle: "Data Driven Materials and Molecular Science (DDMMS)"
+  description: "My research at STFC Daresbury Laboratory leads the Data Driven Materials and Molecular Science group, focusing on physics-informed machine learning, atomistic simulation software at scale, and multiscale materials modelling."
+  primary_link:
+    label: "Explore Research on DDMMS"
+    url: "https://ddmms.elena.re/research.html"
+    icon: "bi-box-arrow-up-right"
+  profile_link:
+    label: "Dr. Alin Marin Elena @ DDMMS"
+    url: "https://ddmms.elena.re/alin-marin-elena.html"
+    icon: "bi-person-workspace"
+  highlights:
+    - title: "Foundation Machine-Learned Interatomic Potentials"
+      icon: "bi-diagram-3"
+      description: "Developing and validating equivariant foundation force fields (MACE, MACE-POLAR), active learning strategies, fine-tuning protocols, and cross-learning across electronic structure theories."
+      link: "https://ddmms.elena.re/research.html"
+    - title: "Complex Liquids, Molten Salts & Porous Materials"
+      icon: "bi-droplet-half"
+      description: "Investigating transport properties, viscosity bounds, and thermal conductivity in molten salts and complex liquids, as well as phonons and nanoconfinement in Metal-Organic Frameworks (MOFs)."
+      link: "https://ddmms.elena.re/research.html"
+    - title: "Atomistic Workflows & Exascale Simulation"
+      icon: "bi-hdd-network"
+      description: "Architecting open-source scientific software and automated workflows including janus-core and DL_POLY 5 for large-scale molecular dynamics and reproducible materials discovery."
+      link: "https://ddmms.elena.re/alin-marin-elena.html"
+
+publications:
+  enable: true
+  title: "Publications"
+  subtitle: "Live Bibliography & Preprints on DDMMS"
+  description: "My full, continuously updated list of peer-reviewed journal articles and preprints is maintained and auto-aggregated via ORCID on the Data Driven Materials and Molecular Science (DDMMS) portal."
+  links:
+    - label: "My Publications on DDMMS"
+      url: "https://ddmms.elena.re/publications.html?author=Alin%20Marin%20Elena"
+      icon: "bi-journal-richtext"
+      primary: true
+    - label: "DDMMS Profile & Metrics"
+      url: "https://ddmms.elena.re/alin-marin-elena.html"
+      icon: "bi-person-lines-fill"
+      primary: false
+    - label: "ORCID (0000-0002-7013-6670)"
+      url: "https://orcid.org/0000-0002-7013-6670"
+      icon: "bi-award"
+      primary: false
+    - label: "All Group Publications"
+      url: "https://ddmms.elena.re/publications.html"
+      icon: "bi-collection"
+      primary: false

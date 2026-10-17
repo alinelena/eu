@@ -1,9 +1,0 @@
-############################# call to action ##############################
-old:
-  enable : true
-  bg_image : "images/backgrounds/old-wall.jpg"
-  bg_image_webp : "images/backgrounds/old-wall.webp"
-  title : ""
-  content : ""
-  button:
-    enable : false

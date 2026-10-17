@@ -1,9 +1,0 @@
-############################# call to action ##############################
-stones:
-  enable : true
-  bg_image : "images/backgrounds/stone-wall.jpg"
-  bg_image_webp : "images/backgrounds/stone-wall.webp"
-  title : ""
-  content : ""
-  button:
-    enable : false

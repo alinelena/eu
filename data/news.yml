@@ -1,0 +1,28 @@
+enable: true
+title: "Random News"
+bg_image: "images/backgrounds/news.jpg"
+bg_image_webp: "images/backgrounds/news.webp"
+items:
+  - name: "Electronic Structure Library workshop"
+    image: "images/news/coding.jpg"
+    image_webp: "images/news/coding.webp"
+    date: "Feb 18, 2020"
+    content: "Participating at the electronic structure library workshop in CECAM Lausanne, [https://www.cecam.org/workshop-details/85](https://www.cecam.org/workshop-details/85)"
+
+  - name: "CCP5 Summer School 2020"
+    image: "images/news/library.jpg"
+    image_webp: "images/news/library.webp"
+    date: "Feb 2, 2020"
+    content: "Registrations are open... [https://summer2020.ccp5.ac.uk/](https://summer2020.ccp5.ac.uk/)"
+
+  - name: "New computer build"
+    image: "images/news/computer.jpg"
+    image_webp: "images/news/computer.webp"
+    date: "Feb 2, 2020"
+    content: "The oil Xeon is getting closer to a new life."
+
+  - name: "Automation working"
+    image: "images/news/automation.jpg"
+    image_webp: "images/news/automation.webp"
+    date: "Feb 2, 2020"
+    content: "Conbee II and Xiaomi sensors, plus IKEA lights and switches mixed with WiFi sensors based on ESP8266-01 and 12e."

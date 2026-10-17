@@ -1,0 +1,67 @@
+enable: true
+title: "Curriculum vitæ"
+subtitle: "Employment & Education Timeline"
+
+events:
+  - period: "July 2015 – Present"
+    year_sort: 2015
+    category: "employment"
+    type_label: "Employment"
+    role: "Computational Scientist"
+    organization: "Science and Technology Facilities Council (STFC), Daresbury Laboratory"
+    location: "Daresbury, United Kingdom"
+    details: "Group Leader of Data Driven Materials and Molecular Science (DDMMS) & Principal Computational Scientist."
+
+  - period: "July 2013 – June 2015"
+    year_sort: 2013
+    category: "employment"
+    type_label: "Employment"
+    role: "Computational Scientist"
+    organization: "Irish Centre for High-End Computing (ICHEC), Dublin Offices"
+    location: "Dublin, Ireland"
+    details: ""
+
+  - period: "September 2010 – July 2013"
+    year_sort: 2010
+    category: "education"
+    type_label: "Education"
+    role: "PhD in Physics"
+    organization: "School of Physics, University College Dublin"
+    location: "Dublin, Ireland"
+    details: "Supervisors: Professor Giovanni Ciccotti and Dr Simone Meloni."
+
+  - period: "February 2009 – August 2010"
+    year_sort: 2009
+    category: "employment"
+    type_label: "Employment"
+    role: "Computational Scientist"
+    organization: "Irish Centre for High-End Computing (ICHEC), Dublin Offices"
+    location: "Dublin, Ireland"
+    details: ""
+
+  - period: "August 2004 – January 2009"
+    year_sort: 2004
+    category: "education"
+    type_label: "Education"
+    role: "PhD Student"
+    organization: "School of Mathematics and Physics, Atomistic Simulation Centre, Queen's University Belfast"
+    location: "Belfast, United Kingdom"
+    details: "Thesis topic: Time Dependent Tight-Binding+U: Applications to fluorescent molecules (never submitted). Supervisors: Professor Tony Paxton and Dr Tchavdar Todorov."
+
+  - period: "October 2000 – June 2004"
+    year_sort: 2000
+    category: "education"
+    type_label: "Education"
+    role: "BSc in Physics (Honours, 9.85/10)"
+    organization: "Faculty of Physics, University of Bucharest"
+    location: "Bucharest, Romania"
+    details: "English taught lectures department. Diploma Thesis: Molecular Orbitals Quantum Calculations for Structures Based on Si, C, N — Vibrational Analysis. Supervisor: Reader Mircea Bercu."
+
+  - period: "September 1996 – June 2000"
+    year_sort: 1996
+    category: "education"
+    type_label: "Education"
+    role: "High School Diploma (Informatics class, GPA 9.87/10)"
+    organization: "High School \"Gib Mihaescu\""
+    location: "Dragasani, Romania"
+    details: ""

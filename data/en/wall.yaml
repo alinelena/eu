@@ -1,9 +1,0 @@
-############################# call to action ##############################
-wall:
-  enable : true
-  bg_image : "images/backgrounds/brick-wall-2.jpg"
-  bg_image_webp : "images/backgrounds/brick-wall-2.webp"
-  title : ""
-  content : ""
-  button:
-    enable : false
