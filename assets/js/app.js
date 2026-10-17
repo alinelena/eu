@@ -8,7 +8,6 @@
     about: "data/about.yml",
     cv: "data/cv.yml",
     researchPubs: "data/research_pubs.yml",
-    collaborators: "data/collaborators.yml",
     news: "data/news.yml",
     posts: "data/posts.yml",
     contact: "data/contact.yml",
@@ -125,8 +124,6 @@
 
   function renderAbout(about) {
     const container = document.getElementById("about-container");
-    const funfactsBg = document.getElementById("funfacts-parallax-bg");
-    const funfactsInner = document.getElementById("funfacts-inner");
     if (!container || !about || !about.enable) return;
 
     const paragraphsHtml = (about.paragraphs || [])
@@ -154,30 +151,6 @@
         </div>
       </div>
     `;
-
-    if (funfactsInner && about.funfacts && about.funfacts.enable) {
-      const ff = about.funfacts;
-      if (funfactsBg) {
-        funfactsBg.style.backgroundImage = `url("${ff.bg_image_webp || ff.bg_image}")`;
-      }
-      funfactsInner.innerHTML = `
-        <div class="row g-4 justify-content-center">
-          ${(ff.items || [])
-            .map(
-              (item) => `
-            <div class="col-6 col-md-3">
-              <div class="stat-card">
-                <div class="stat-icon"><i class="bi ${item.icon}"></i></div>
-                <div class="stat-count">${item.count}</div>
-                <div class="stat-label">${item.title}</div>
-              </div>
-            </div>
-          `
-            )
-            .join("")}
-        </div>
-      `;
-    }
   }
 
   function renderCvTimelineItems(events, filter) {
@@ -348,48 +321,6 @@
         </div>
       `;
     }
-  }
-
-  function renderCollaborators(collab) {
-    const container = document.getElementById("collaborators-container");
-    if (!container || !collab || !collab.enable) return;
-
-    container.innerHTML = `
-      ${renderSectionHeader(collab.title)}
-      <div class="row g-4 justify-content-center">
-        ${(collab.members || [])
-          .map(
-            (m) => `
-          <div class="col-md-8 col-lg-6">
-            <div class="surface-card flex-md-row align-items-center gap-4">
-              <img
-                src="${m.image_webp || m.image}"
-                onerror="this.onerror=null;this.src='${m.image}';"
-                alt="${m.name}"
-                class="collab-avatar"
-                loading="lazy"
-              >
-              <div>
-                <h3 class="h5 text-white mb-1">${m.name}</h3>
-                ${m.affiliation ? `<div class="small text-info mb-2">${m.affiliation}</div>` : ""}
-                <p class="text-secondary small mb-2">${m.content}</p>
-                ${(m.links || [])
-                  .map(
-                    (l) => `
-                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="small fw-semibold">
-                    <i class="bi ${l.icon} me-1"></i>${l.label} <i class="bi bi-arrow-up-right"></i>
-                  </a>
-                `
-                  )
-                  .join("")}
-              </div>
-            </div>
-          </div>
-        `
-          )
-          .join("")}
-      </div>
-    `;
   }
 
   function renderNews(news) {
@@ -751,7 +682,6 @@
         about,
         cv,
         researchPubs,
-        collaborators,
         news,
         posts,
         contact,
@@ -760,7 +690,6 @@
         fetchYaml(DATA_FILES.about),
         fetchYaml(DATA_FILES.cv),
         fetchYaml(DATA_FILES.researchPubs),
-        fetchYaml(DATA_FILES.collaborators),
         fetchYaml(DATA_FILES.news),
         fetchYaml(DATA_FILES.posts),
         fetchYaml(DATA_FILES.contact),
@@ -771,7 +700,6 @@
         about,
         cv,
         researchPubs,
-        collaborators,
         news,
         posts,
         contact,
@@ -783,7 +711,6 @@
       renderAbout(about);
       renderCv(cv);
       renderResearchAndPubs(researchPubs);
-      renderCollaborators(collaborators);
       renderNews(news);
       renderPosts(posts);
       renderContact(contact, site);
