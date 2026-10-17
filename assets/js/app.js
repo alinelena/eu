@@ -40,12 +40,39 @@
     };
   }
 
-  function renderSectionHeader(title, subtitle) {
+  function getSectionColor(sectionRef) {
+    if (!sectionRef) return "#57cbcc";
+    if (sectionRef.startsWith("#") && /^#[0-9a-fA-F]{3,8}$/.test(sectionRef)) {
+      return sectionRef;
+    }
+    const secId = sectionRef.startsWith("#") ? sectionRef : `#${sectionRef}`;
+    if (state.data && state.data.site && Array.isArray(state.data.site.menu)) {
+      const match = state.data.site.menu.find(
+        (m) =>
+          m.url === secId ||
+          (Array.isArray(m.match_sections) && m.match_sections.includes(secId))
+      );
+      if (match && match.color) return match.color;
+    }
+    const colorMap = {
+      "#about": "#6cb670",
+      "#cv": "#fbbf24",
+      "#research": "#818cf8",
+      "#publications": "#818cf8",
+      "#hobbies": "#f472b6",
+      "#posts": "#fb923c",
+      "#contact": "#2dd4bf",
+    };
+    return colorMap[secId] || "#57cbcc";
+  }
+
+  function renderSectionHeader(title, subtitle, sectionRef) {
     const { first, rest } = splitTitle(title);
+    const color = getSectionColor(sectionRef);
     return `
-      <div class="section-header">
+      <div class="section-header" style="--section-accent: ${color};">
         <h2 class="section-title">
-          ${first} ${rest ? `<span class="accent">${rest}</span>` : ""}
+          <span class="section-title-highlight" style="color: ${color};">${first}</span>${rest ? ` <span class="text-white">${rest}</span>` : ""}
         </h2>
         ${subtitle ? `<p class="text-secondary mb-2">${subtitle}</p>` : ""}
         <div class="section-divider"></div>
@@ -135,7 +162,7 @@
       .join("");
 
     container.innerHTML = `
-      ${renderSectionHeader(about.title)}
+      ${renderSectionHeader(about.title, null, "#about")}
       <div class="about-card">
         <div class="row g-0 align-items-stretch">
           <div class="col-lg-5 about-image-col" style="background-image: url('${about.image_webp || about.image}');">
@@ -249,7 +276,7 @@
     const eduCount = events.filter((e) => e.category === "education").length;
 
     container.innerHTML = `
-      ${renderSectionHeader(cv.title, cv.subtitle)}
+      ${renderSectionHeader(cv.title, cv.subtitle, "#cv")}
       <div class="timeline-filter-bar" role="group" aria-label="Filter CV timeline">
         <button type="button" class="timeline-filter-btn active" data-cv-filter="all">
           All Events (${events.length})
@@ -293,7 +320,7 @@
     if (researchContainer && rp.research && rp.research.enable) {
       const r = rp.research;
       researchContainer.innerHTML = `
-        ${renderSectionHeader(r.title, r.subtitle)}
+        ${renderSectionHeader(r.title, r.subtitle, "#research")}
         <div class="row justify-content-center mb-4">
           <div class="col-lg-8 text-center">
             <p class="lead text-secondary mb-4">${r.description}</p>
@@ -351,7 +378,7 @@
     if (pubsContainer && rp.publications && rp.publications.enable) {
       const p = rp.publications;
       pubsContainer.innerHTML = `
-        ${renderSectionHeader(p.title, p.subtitle)}
+        ${renderSectionHeader(p.title, p.subtitle, "#publications")}
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <div class="surface-card p-4 p-lg-5 text-center">
@@ -389,7 +416,7 @@
     if (!container || !hobbies || !hobbies.enable) return;
 
     container.innerHTML = `
-      ${renderSectionHeader(hobbies.title, hobbies.subtitle)}
+      ${renderSectionHeader(hobbies.title, hobbies.subtitle, "#hobbies")}
       <div class="row g-4 justify-content-center">
         ${(hobbies.items || [])
           .map(
@@ -465,7 +492,7 @@
     enabledPosts.forEach((p) => state.postsBySlug.set(p.slug, p));
 
     container.innerHTML = `
-      ${renderSectionHeader(postsData.title)}
+      ${renderSectionHeader(postsData.title, null, "#posts")}
       <div class="row g-4">
         ${enabledPosts
           .map(
@@ -531,7 +558,7 @@
     const footerContainer = document.getElementById("footer-container");
     if (container && contact && contact.enable) {
       container.innerHTML = `
-        ${renderSectionHeader(contact.title, contact.subtitle)}
+        ${renderSectionHeader(contact.title, contact.subtitle, "#contact")}
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-5">
             <div class="surface-card justify-content-center">

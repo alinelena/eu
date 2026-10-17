@@ -371,10 +371,11 @@ a:hover {
   font-size: clamp(1.9rem, 3.5vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 0.65rem;
+  color: #ffffff;
 }
 
-.section-title .accent {
-  color: var(--accent-green);
+.section-title .section-title-highlight {
+  color: var(--section-accent, var(--accent-cyan));
 }
 
 .section-divider {
@@ -390,7 +391,7 @@ a:hover {
   position: absolute;
   width: 48px;
   height: 5px;
-  background: var(--accent-cyan);
+  background: var(--section-accent, var(--accent-cyan));
   border-radius: 3px;
   left: 50%;
   top: -1.5px;
