@@ -451,6 +451,17 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
+.about-card a {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.18s ease;
+}
+
+.about-card a:hover {
+  color: var(--accent-green);
+}
+
 .about-image-col {
   min-height: 360px;
   background-size: cover;

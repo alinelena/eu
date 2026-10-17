@@ -157,8 +157,18 @@
     const container = document.getElementById("about-container");
     if (!container || !about || !about.enable) return;
 
+    const parseText = (text) => {
+      if (window.marked && typeof marked.parseInline === "function") {
+        let html = marked.parseInline(text || "");
+        return html.replace(/<a\s+(?:(?!(?:target=))[^>])+>/gi, (match) =>
+          match.replace("<a ", '<a target="_blank" rel="noopener noreferrer" ')
+        );
+      }
+      return text || "";
+    };
+
     const paragraphsHtml = (about.paragraphs || [])
-      .map((p) => `<p class="text-secondary mb-3">${p}</p>`)
+      .map((p) => `<p class="text-secondary mb-3">${parseText(p)}</p>`)
       .join("");
 
     container.innerHTML = `
