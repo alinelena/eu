@@ -7,8 +7,8 @@ favicon: "images/favicon.png"
 
 banner:
   enable: true
-  bg_image_webp: "images/backgrounds/hero.webp"
-  bg_image: "images/backgrounds/hero.png"
+  bg_image_webp: "images/backgrounds/white-wall.webp"
+  bg_image: "images/backgrounds/white-wall.jpg"
   title: "Alin M Elena"
   subtitle: "Computational Scientist • Materials & Molecular Modelling"
   tagline: "personal site ⇓"
