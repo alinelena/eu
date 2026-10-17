@@ -64,7 +64,7 @@ events:
     details: ""
 
   - period: "August 2004 – January 2009"
-    start_date: "2004-08-01"
+    start_date: "2004-08-17"
     end_date: "2009-01-31"
     category: "education"
     type_label: "Education"
