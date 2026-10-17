@@ -20,3 +20,4 @@ items:
     description: "DIY home automation and environmental sensing built around ESPHome, ESP8266/ESP32 microcontrollers, Zigbee (ConBee II), Xiaomi sensors, and smart lighting."
     url: "https://gitlab.com/48broadbent/broadbent"
     link_label: "View on GitLab (48broadbent)"
+

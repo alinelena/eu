@@ -1,28 +1,41 @@
 enable: true
 title: "Curriculum vitæ"
 subtitle: "Employment & Education Timeline"
+orcid: "0000-0002-7013-6670"
 
 events:
-  - period: "July 2015 – Present"
-    year_sort: 2015
+  - period: "October 2024 – Present"
+    start_date: "2024-10-01"
+    category: "employment"
+    type_label: "Employment"
+    role: "Group Leader - Data Driven Materials and Molecular Science"
+    organization: "Science and Technology Facilities Council (STFC), Scientific Computing Department"
+    location: "Warrington, Cheshire, United Kingdom (Daresbury Laboratory)"
+    details: ""
+
+  - period: "July 2015 – September 2024"
+    start_date: "2015-07-07"
+    end_date: "2024-09-30"
     category: "employment"
     type_label: "Employment"
     role: "Computational Scientist"
-    organization: "Science and Technology Facilities Council (STFC), Daresbury Laboratory"
-    location: "Daresbury, United Kingdom"
-    details: "Group Leader of Data Driven Materials and Molecular Science (DDMMS) & Principal Computational Scientist."
+    organization: "Science and Technology Facilities Council (STFC), Scientific Computing Department"
+    location: "Warrington, Cheshire, United Kingdom (Daresbury Laboratory)"
+    details: ""
 
   - period: "July 2013 – June 2015"
-    year_sort: 2013
+    start_date: "2013-07-14"
+    end_date: "2015-06-30"
     category: "employment"
     type_label: "Employment"
     role: "Computational Scientist"
-    organization: "Irish Centre for High-End Computing (ICHEC), Dublin Offices"
+    organization: "Irish Centre for High-End Computing (ICHEC)"
     location: "Dublin, Ireland"
     details: ""
 
   - period: "September 2010 – July 2013"
-    year_sort: 2010
+    start_date: "2010-09-01"
+    end_date: "2013-07-11"
     category: "education"
     type_label: "Education"
     role: "PhD in Physics"
@@ -31,16 +44,18 @@ events:
     details: "Supervisors: Professor Giovanni Ciccotti and Dr Simone Meloni."
 
   - period: "February 2009 – August 2010"
-    year_sort: 2009
+    start_date: "2009-02-01"
+    end_date: "2010-08-31"
     category: "employment"
     type_label: "Employment"
     role: "Computational Scientist"
-    organization: "Irish Centre for High-End Computing (ICHEC), Dublin Offices"
+    organization: "Irish Centre for High-End Computing (ICHEC)"
     location: "Dublin, Ireland"
     details: ""
 
   - period: "August 2004 – January 2009"
-    year_sort: 2004
+    start_date: "2004-08-01"
+    end_date: "2009-01-31"
     category: "education"
     type_label: "Education"
     role: "PhD Student"
@@ -49,7 +64,8 @@ events:
     details: "Thesis topic: Time Dependent Tight-Binding+U: Applications to fluorescent molecules (never submitted). Supervisors: Professor Tony Paxton and Dr Tchavdar Todorov."
 
   - period: "October 2000 – June 2004"
-    year_sort: 2000
+    start_date: "2000-10-01"
+    end_date: "2004-06-30"
     category: "education"
     type_label: "Education"
     role: "BSc in Physics (Honours, 9.85/10)"
@@ -58,11 +74,11 @@ events:
     details: "English taught lectures department. Diploma Thesis: Molecular Orbitals Quantum Calculations for Structures Based on Si, C, N — Vibrational Analysis. Supervisor: Reader Mircea Bercu."
 
   - period: "September 1996 – June 2000"
-    year_sort: 1996
+    start_date: "1996-09-01"
+    end_date: "2000-06-30"
     category: "education"
     type_label: "Education"
     role: "High School Diploma (Informatics class, GPA 9.87/10)"
     organization: "High School \"Gib Mihaescu\""
     location: "Dragasani, Romania"
     details: ""
-

@@ -9,7 +9,6 @@
     cv: "data/cv.yml",
     researchPubs: "data/research_pubs.yml",
     hobbies: "data/hobbies.yml",
-    news: "data/news.yml",
     posts: "data/posts.yml",
     contact: "data/contact.yml",
   };
@@ -56,7 +55,6 @@
 
   function renderCornerMenu(site) {
     const navList = document.getElementById("corner-nav-list");
-    const quickLinks = document.getElementById("corner-quick-links");
     const logoImg = document.getElementById("corner-btn-logo");
 
     if (site.logo && logoImg) {
@@ -74,20 +72,6 @@
               <span>${item.name}</span>
             </a>
           </li>
-        `
-        )
-        .join("");
-    }
-
-    if (quickLinks && Array.isArray(site.social)) {
-      quickLinks.innerHTML = site.social
-        .slice(0, 4)
-        .map(
-          (s) => `
-          <a class="corner-quick-badge" href="${s.url}" target="_blank" rel="noopener noreferrer">
-            <i class="bi ${s.icon}"></i>
-            <span>${s.name}</span>
-          </a>
         `
         )
         .join("");
@@ -154,19 +138,59 @@
     `;
   }
 
+  function drawTimelineWave() {
+    const timelineEl = document.getElementById("cv-timeline-list");
+    const svgEl = document.getElementById("cv-timeline-wave");
+    if (!timelineEl || !svgEl) return;
+
+    const totalHeight = Math.max(timelineEl.offsetHeight, 200);
+    const width = 64;
+    const centerX = width / 2;
+    const isMobile = window.innerWidth < 768;
+    const amp = isMobile ? 6 : 12;
+
+    svgEl.setAttribute("viewBox", `0 0 ${width} ${totalHeight}`);
+
+    const items = Array.from(timelineEl.querySelectorAll(".timeline-item"));
+    const points = [{ x: centerX, y: 0 }];
+
+    items.forEach((item, idx) => {
+      const marker = item.querySelector(".timeline-marker");
+      const markerY = item.offsetTop + (marker ? marker.offsetTop + marker.offsetHeight / 2 : 36);
+      const dir = isMobile ? (idx % 2 === 0 ? -1 : 1) : idx % 2 === 0 ? -1 : 1;
+      points.push({ x: centerX + dir * amp, y: markerY });
+    });
+
+    points.push({ x: centerX, y: totalHeight });
+
+    let d = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[i];
+      const p1 = points[i + 1];
+      const midY = (p0.y + p1.y) / 2;
+      d += ` C ${p0.x} ${midY}, ${p1.x} ${midY}, ${p1.x} ${p1.y}`;
+    }
+
+    const pathEl = svgEl.querySelector("path");
+    if (pathEl) {
+      pathEl.setAttribute("d", d);
+    }
+  }
+
   function renderCvTimelineItems(events, filter) {
     const filtered =
       filter === "all"
         ? events
         : events.filter((ev) => ev.category === filter);
 
-    return filtered
-      .map((ev) => {
+    const itemsHtml = filtered
+      .map((ev, idx) => {
         const isEdu = ev.category === "education";
         const badgeClass = isEdu ? "badge-education" : "badge-employment";
         const iconClass = isEdu ? "bi-mortarboard-fill" : "bi-briefcase-fill";
+        const sideClass = idx % 2 === 0 ? "timeline-left" : "timeline-right";
         return `
-          <div class="timeline-item" data-category="${ev.category}">
+          <div class="timeline-item ${sideClass}" data-category="${ev.category}">
             <div class="timeline-marker" title="${ev.type_label}"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
@@ -190,6 +214,20 @@
         `;
       })
       .join("");
+
+    return `
+      <svg id="cv-timeline-wave" class="timeline-wave-svg" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="timelineWaveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#57cbcc" />
+            <stop offset="55%" stop-color="#6cb670" />
+            <stop offset="100%" stop-color="#57cbcc" stop-opacity="0.35" />
+          </linearGradient>
+        </defs>
+        <path d="" fill="none" stroke="url(#timelineWaveGrad)" stroke-width="3" stroke-linecap="round" />
+      </svg>
+      ${itemsHtml}
+    `;
   }
 
   function renderCv(cv) {
@@ -218,6 +256,9 @@
       </div>
     `;
 
+    requestAnimationFrame(drawTimelineWave);
+    window.addEventListener("resize", drawTimelineWave, { passive: true });
+
     container.querySelectorAll("[data-cv-filter]").forEach((btn) => {
       btn.addEventListener("click", () => {
         state.cvFilter = btn.getAttribute("data-cv-filter");
@@ -228,6 +269,7 @@
         const listEl = document.getElementById("cv-timeline-list");
         if (listEl) {
           listEl.innerHTML = renderCvTimelineItems(events, state.cvFilter);
+          requestAnimationFrame(drawTimelineWave);
         }
       });
     });
@@ -361,43 +403,6 @@
                 </div>
               </div>
             </article>
-          </div>
-        `
-          )
-          .join("")}
-      </div>
-    `;
-  }
-
-  function renderNews(news) {
-    const container = document.getElementById("news-container");
-    if (!container || !news || !news.enable) return;
-
-    container.innerHTML = `
-      ${renderSectionHeader(news.title)}
-      <div class="row g-4">
-        ${(news.items || [])
-          .map(
-            (item) => `
-          <div class="col-md-6">
-            <div class="surface-card flex-row align-items-start gap-3">
-              <img
-                src="${item.image_webp || item.image}"
-                onerror="this.onerror=null;this.src='${item.image}';"
-                alt="${item.name}"
-                class="news-thumb"
-                loading="lazy"
-              >
-              <div>
-                <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
-                  <h3 class="h6 text-white mb-0">${item.name}</h3>
-                  <span class="badge bg-dark border border-secondary text-secondary">${item.date}</span>
-                </div>
-                <div class="text-secondary small mb-0">
-                  ${marked.parseInline(item.content || "")}
-                </div>
-              </div>
-            </div>
           </div>
         `
           )
@@ -729,7 +734,6 @@
         cv,
         researchPubs,
         hobbies,
-        news,
         posts,
         contact,
       ] = await Promise.all([
@@ -738,7 +742,6 @@
         fetchYaml(DATA_FILES.cv),
         fetchYaml(DATA_FILES.researchPubs),
         fetchYaml(DATA_FILES.hobbies),
-        fetchYaml(DATA_FILES.news),
         fetchYaml(DATA_FILES.posts),
         fetchYaml(DATA_FILES.contact),
       ]);
@@ -749,7 +752,6 @@
         cv,
         researchPubs,
         hobbies,
-        news,
         posts,
         contact,
       };
@@ -761,7 +763,6 @@
       renderCv(cv);
       renderResearchAndPubs(researchPubs);
       renderHobbies(hobbies);
-      renderNews(news);
       renderPosts(posts);
       renderContact(contact, site);
       initCornerMenuInteractions();
