@@ -52,6 +52,9 @@ dividers:
   after_publications:
     bg_image_webp: "images/backgrounds/stone-wall-2.webp"
     bg_image: "images/backgrounds/stone-wall-2.jpg"
+  after_hobbies:
+    bg_image_webp: "images/backgrounds/stones.webp"
+    bg_image: "images/backgrounds/stones.jpg"
   after_posts:
     bg_image_webp: "images/backgrounds/brick-wall-2.webp"
     bg_image: "images/backgrounds/brick-wall-2.jpg"
