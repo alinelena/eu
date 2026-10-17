@@ -143,7 +143,11 @@
         }
       </div>
       <h1 class="hero-title">${b.title || site.title}</h1>
-      ${b.subtitle ? `<p class="hero-subtitle">${b.subtitle}</p>` : ""}
+      ${
+        b.subtitle
+          ? `<p class="hero-subtitle">${b.subtitle.replace("•", '<span class="hero-bullet">•</span>')}</p>`
+          : ""
+      }
       ${
         b.tagline
           ? `
