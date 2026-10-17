@@ -95,28 +95,14 @@
   }
 
   function renderHero(site) {
-    const heroSection = document.getElementById("hero");
+    const heroBg = document.getElementById("hero-parallax-bg");
     const heroContainer = document.getElementById("hero-content");
-    if (!heroSection || !heroContainer || !site.banner) return;
+    if (!heroContainer || !site.banner) return;
 
     const b = site.banner;
-    heroSection.style.backgroundImage = `url("${b.bg_image_webp || b.bg_image}")`;
-
-    const badgesHtml = Array.isArray(b.badges)
-      ? `<div class="hero-badges">
-          ${b.badges
-            .map(
-              (badge) => `
-              <a href="${badge.url}" class="hero-pill" target="_blank" rel="noopener noreferrer">
-                <i class="bi ${badge.icon}"></i>
-                <span>${badge.label}</span>
-                <i class="bi bi-arrow-up-right small opacity-75"></i>
-              </a>
-            `
-            )
-            .join("")}
-        </div>`
-      : "";
+    if (heroBg) {
+      heroBg.style.backgroundImage = `url("${b.bg_image_webp || b.bg_image}")`;
+    }
 
     heroContainer.innerHTML = `
       <div class="hero-pulse-badge">
@@ -128,7 +114,6 @@
       </div>
       <h1 class="hero-title">${b.title || site.title}</h1>
       ${b.subtitle ? `<p class="hero-subtitle">${b.subtitle}</p>` : ""}
-      ${badgesHtml}
       <div>
         <a href="#about" class="scroll-down-btn" aria-label="Scroll to About section">
           <span>${b.tagline || "Explore"}</span>
@@ -140,7 +125,8 @@
 
   function renderAbout(about) {
     const container = document.getElementById("about-container");
-    const funfactsSection = document.getElementById("funfacts-section");
+    const funfactsBg = document.getElementById("funfacts-parallax-bg");
+    const funfactsInner = document.getElementById("funfacts-inner");
     if (!container || !about || !about.enable) return;
 
     const paragraphsHtml = (about.paragraphs || [])
@@ -169,26 +155,26 @@
       </div>
     `;
 
-    if (funfactsSection && about.funfacts && about.funfacts.enable) {
+    if (funfactsInner && about.funfacts && about.funfacts.enable) {
       const ff = about.funfacts;
-      funfactsSection.style.backgroundImage = `url("${ff.bg_image_webp || ff.bg_image}")`;
-      funfactsSection.innerHTML = `
-        <div class="container position-relative" style="z-index: 2;">
-          <div class="row g-4 justify-content-center">
-            ${(ff.items || [])
-              .map(
-                (item) => `
-              <div class="col-6 col-md-3">
-                <div class="stat-card">
-                  <div class="stat-icon"><i class="bi ${item.icon}"></i></div>
-                  <div class="stat-count">${item.count}</div>
-                  <div class="stat-label">${item.title}</div>
-                </div>
+      if (funfactsBg) {
+        funfactsBg.style.backgroundImage = `url("${ff.bg_image_webp || ff.bg_image}")`;
+      }
+      funfactsInner.innerHTML = `
+        <div class="row g-4 justify-content-center">
+          ${(ff.items || [])
+            .map(
+              (item) => `
+            <div class="col-6 col-md-3">
+              <div class="stat-card">
+                <div class="stat-icon"><i class="bi ${item.icon}"></i></div>
+                <div class="stat-count">${item.count}</div>
+                <div class="stat-label">${item.title}</div>
               </div>
-            `
-              )
-              .join("")}
-          </div>
+            </div>
+          `
+            )
+            .join("")}
         </div>
       `;
     }
@@ -615,9 +601,71 @@
     Object.entries(site.dividers).forEach(([key, val]) => {
       const el = document.querySelector(`[data-divider="${key}"]`);
       if (el && val) {
-        el.style.backgroundImage = `url("${val.bg_image_webp || val.bg_image}")`;
+        const bgEl = el.querySelector(".parallax-bg") || el;
+        bgEl.style.backgroundImage = `url("${val.bg_image_webp || val.bg_image}")`;
       }
     });
+  }
+
+  function initParallaxAndReveal() {
+    const parallaxWindows = Array.from(
+      document.querySelectorAll(".parallax-window")
+    );
+    const heroContent = document.getElementById("hero-content");
+    let ticking = false;
+
+    function updateParallax() {
+      const viewportHeight = window.innerHeight;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      parallaxWindows.forEach((win) => {
+        const bg = win.querySelector(".parallax-bg");
+        if (!bg) return;
+        const rect = win.getBoundingClientRect();
+        if (rect.bottom < -100 || rect.top > viewportHeight + 100) return;
+
+        const speed = parseFloat(win.getAttribute("data-parallax-speed")) || 0.38;
+        const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+        const translateY = -centerOffset * speed;
+        bg.style.transform = `translate3d(0, ${translateY.toFixed(1)}px, 0)`;
+      });
+
+      if (heroContent && scrollY < viewportHeight) {
+        const translateHero = scrollY * 0.28;
+        const opacityHero = Math.max(0, 1 - scrollY / (viewportHeight * 0.8));
+        heroContent.style.transform = `translate3d(0, ${translateHero.toFixed(1)}px, 0)`;
+        heroContent.style.opacity = opacityHero.toFixed(3);
+      }
+
+      ticking = false;
+    }
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+    window.addEventListener("resize", updateParallax, { passive: true });
+    updateParallax();
+
+    // Section scroll-reveal observer
+    const revealSections = document.querySelectorAll(".reveal-section");
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    revealSections.forEach((sec) => revealObserver.observe(sec));
   }
 
   function initCornerMenuInteractions() {
@@ -740,6 +788,7 @@
       renderPosts(posts);
       renderContact(contact, site);
       initCornerMenuInteractions();
+      initParallaxAndReveal();
       handleInitialHash();
     } catch (err) {
       console.error("Error initializing site from YAML:", err);

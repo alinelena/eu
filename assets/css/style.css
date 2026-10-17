@@ -233,9 +233,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  overflow: hidden;
   padding: 4rem 1rem;
 }
 
@@ -245,7 +243,7 @@ a:hover {
   inset: 0;
   background: radial-gradient(
     circle at center,
-    rgba(15, 19, 24, 0.58) 0%,
+    rgba(15, 19, 24, 0.52) 0%,
     rgba(15, 19, 24, 0.88) 100%
   );
   z-index: 1;
@@ -255,6 +253,7 @@ a:hover {
   position: relative;
   z-index: 2;
   max-width: 780px;
+  will-change: transform, opacity;
 }
 
 .hero-pulse-badge {
@@ -289,36 +288,7 @@ a:hover {
 .hero-subtitle {
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 2.25rem;
-}
-
-.hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.15rem;
-  border-radius: 999px;
-  background: rgba(22, 28, 36, 0.78);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--text-primary);
-  font-size: 0.92rem;
-  transition: all 0.2s ease;
-}
-
-.hero-pill:hover {
-  border-color: var(--accent-cyan);
-  background: rgba(87, 203, 204, 0.16);
-  color: #fff;
-  transform: translateY(-2px);
+  margin-bottom: 2rem;
 }
 
 .scroll-down-btn {
@@ -344,15 +314,30 @@ a:hover {
 }
 
 /* ==========================================================================
-   Section Layout & Headers
+   Section Layout, Scroll Reveal & Parallax Windows
    ========================================================================== */
 .section-block {
   padding: 5.5rem 0;
   position: relative;
+  z-index: 2;
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.55);
 }
 
 .section-bg-alt {
   background-color: var(--bg-secondary);
+}
+
+.reveal-section .container {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-section.is-visible .container {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-header {
@@ -390,26 +375,45 @@ a:hover {
   transform: translateX(-50%);
 }
 
-/* Parallax Image Dividers */
-.parallax-band {
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/* Parallax Image Windows between Sections */
+.parallax-window {
   position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: -28%;
+  left: 0;
+  width: 100%;
+  height: 156%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  z-index: 0;
+}
+
+.parallax-band {
+  height: 240px;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 18px 32px rgba(0, 0, 0, 0.65),
+              inset 0 -18px 32px rgba(0, 0, 0, 0.65);
 }
 
 .parallax-band::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 19, 24, 0.62);
+  background: rgba(12, 16, 21, 0.56);
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
   .parallax-band {
-    background-attachment: scroll;
-    height: 120px;
+    height: 160px;
   }
 }
 

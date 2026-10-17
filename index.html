@@ -62,7 +62,8 @@
 
   <!-- Hero / Landing Section -->
   <header>
-    <section id="hero" class="hero-section" style="background-image: url('images/backgrounds/hero.webp');">
+    <section id="hero" class="hero-section parallax-window" data-parallax-speed="0.42">
+      <div class="parallax-bg" id="hero-parallax-bg" style="background-image: url('images/backgrounds/hero.webp');"></div>
       <div id="hero-content" class="hero-content container">
         <div class="hero-pulse-badge">
           <img src="images/logo.png" alt="Alin M Elena">
@@ -81,51 +82,68 @@
 
   <main>
     <!-- About Section -->
-    <section id="about" class="section-block">
+    <section id="about" class="section-block reveal-section">
       <div id="about-container" class="container"></div>
     </section>
 
+    <div class="parallax-band parallax-window" data-divider="after_about" data-parallax-speed="0.38">
+      <div class="parallax-bg"></div>
+    </div>
+
     <!-- Funfacts / Stats Parallax Section -->
-    <section id="funfacts-section" class="section-block parallax-band d-flex align-items-center" style="height: auto; min-height: 240px; padding: 3.5rem 0;"></section>
+    <section id="funfacts-section" class="section-block parallax-band parallax-window d-flex align-items-center" data-parallax-speed="0.35" style="height: auto; min-height: 260px; padding: 4rem 0;">
+      <div class="parallax-bg" id="funfacts-parallax-bg"></div>
+      <div id="funfacts-inner" class="container position-relative" style="z-index: 2;"></div>
+    </section>
 
     <!-- CV Section (Vertical Linear Timeline: Employment & Education) -->
-    <section id="cv" class="section-block section-bg-alt">
+    <section id="cv" class="section-block section-bg-alt reveal-section">
       <div id="cv-container" class="container"></div>
     </section>
 
-    <div class="parallax-band" data-divider="after_cv"></div>
+    <div class="parallax-band parallax-window" data-divider="after_cv" data-parallax-speed="0.38">
+      <div class="parallax-bg"></div>
+    </div>
 
     <!-- Research Section (Links to ddmms.elena.re) -->
-    <section id="research" class="section-block">
+    <section id="research" class="section-block reveal-section">
       <div id="research-container" class="container"></div>
     </section>
 
+    <div class="parallax-band parallax-window" data-divider="after_research" data-parallax-speed="0.38">
+      <div class="parallax-bg"></div>
+    </div>
+
     <!-- Publications Section (Links to ddmms.elena.re) -->
-    <section id="publications" class="section-block section-bg-alt">
+    <section id="publications" class="section-block section-bg-alt reveal-section">
       <div id="publications-container" class="container"></div>
     </section>
 
-    <div class="parallax-band" data-divider="after_research"></div>
+    <div class="parallax-band parallax-window" data-divider="after_publications" data-parallax-speed="0.38">
+      <div class="parallax-bg"></div>
+    </div>
 
     <!-- Collaborators Section -->
-    <section id="collaborators" class="section-block">
+    <section id="collaborators" class="section-block reveal-section">
       <div id="collaborators-container" class="container"></div>
     </section>
 
     <!-- Random News Section -->
-    <section id="news" class="section-block section-bg-alt">
+    <section id="news" class="section-block section-bg-alt reveal-section">
       <div id="news-container" class="container"></div>
     </section>
 
     <!-- Blog / Posts Section -->
-    <section id="posts" class="section-block">
+    <section id="posts" class="section-block reveal-section">
       <div id="posts-container" class="container"></div>
     </section>
 
-    <div class="parallax-band" data-divider="after_posts"></div>
+    <div class="parallax-band parallax-window" data-divider="after_posts" data-parallax-speed="0.38">
+      <div class="parallax-bg"></div>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-block section-bg-alt">
+    <section id="contact" class="section-block section-bg-alt reveal-section">
       <div id="contact-container" class="container"></div>
     </section>
   </main>
@@ -163,4 +181,3 @@
   <script src="assets/js/app.js"></script>
 </body>
 </html>
-

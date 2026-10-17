@@ -12,16 +12,6 @@ banner:
   title: "Alin M Elena"
   subtitle: "Computational Scientist • Materials & Molecular Modelling"
   tagline: "personal site ⇓"
-  badges:
-    - label: "DDMMS Group Leader @ STFC"
-      url: "https://ddmms.elena.re/alin-marin-elena.html"
-      icon: "bi-building"
-    - label: "Publications"
-      url: "https://ddmms.elena.re/publications.html?author=Alin%20Marin%20Elena"
-      icon: "bi-journal-richtext"
-    - label: "Research"
-      url: "https://ddmms.elena.re/research.html"
-      icon: "bi-cpu"
 
 menu:
   - name: "Home"
@@ -39,12 +29,6 @@ menu:
   - name: "Publications"
     url: "#publications"
     icon: "bi-journal-text"
-  - name: "Collaborators"
-    url: "#collaborators"
-    icon: "bi-people"
-  - name: "News"
-    url: "#news"
-    icon: "bi-broadcast"
   - name: "Posts"
     url: "#posts"
     icon: "bi-pen"
@@ -62,6 +46,9 @@ dividers:
   after_research:
     bg_image_webp: "images/backgrounds/old-wall.webp"
     bg_image: "images/backgrounds/old-wall.jpg"
+  after_publications:
+    bg_image_webp: "images/backgrounds/news.webp"
+    bg_image: "images/backgrounds/news.jpg"
   after_posts:
     bg_image_webp: "images/backgrounds/brick-wall-2.webp"
     bg_image: "images/backgrounds/brick-wall-2.jpg"
@@ -87,4 +74,3 @@ social:
     url: "https://www.youtube.com/channel/UCxxP1gPUbuldEXSPHvSqYLg"
 
 copyright: "Copyright © 2003–2026 Alin M Elena. All rights reserved."
-
