@@ -35,16 +35,12 @@ publications:
       url: "https://ddmms.elena.re/publications.html?author=Alin%20Marin%20Elena"
       icon: "bi-journal-richtext"
       primary: true
-    - label: "DDMMS Profile & Metrics"
-      url: "https://ddmms.elena.re/alin-marin-elena.html"
-      icon: "bi-person-lines-fill"
-      primary: false
     - label: "ORCID (0000-0002-7013-6670)"
       url: "https://orcid.org/0000-0002-7013-6670"
       icon: "bi-award"
       primary: false
-    - label: "All Group Publications"
-      url: "https://ddmms.elena.re/publications.html"
-      icon: "bi-collection"
+    - label: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=fQUb-PsAAAAJ&hl=en"
+      icon: "bi-mortarboard"
       primary: false
 

@@ -153,16 +153,7 @@
           <div class="col-lg-5 about-image-col" style="background-image: url('${about.image_webp || about.image}');">
           </div>
           <div class="col-lg-7 p-4 p-lg-5 d-flex flex-column justify-content-center">
-            ${about.lead ? `<p class="lead text-light fw-semibold mb-3">${about.lead}</p>` : ""}
             ${paragraphsHtml}
-            <div class="mt-2 d-flex flex-wrap gap-2">
-              <a href="#cv" class="btn-ddmms-outline btn-sm">
-                <i class="bi bi-clock-history"></i> View Timeline CV
-              </a>
-              <a href="https://ddmms.elena.re/alin-marin-elena.html" target="_blank" rel="noopener noreferrer" class="btn-ddmms-outline btn-sm">
-                <i class="bi bi-globe2"></i> DDMMS Group Profile
-              </a>
-            </div>
           </div>
         </div>
       </div>
