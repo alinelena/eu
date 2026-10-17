@@ -138,18 +138,24 @@
       <div class="hero-pulse-badge">
         ${
           site.logo
-            ? `<img src="${site.logo}" alt="${b.title}">`
+            ? `<img src="${site.logo}" alt="${b.title || site.title}">`
             : `<i class="bi bi-activity"></i>`
         }
       </div>
       <h1 class="hero-title">${b.title || site.title}</h1>
       ${b.subtitle ? `<p class="hero-subtitle">${b.subtitle}</p>` : ""}
+      ${
+        b.tagline
+          ? `
       <div>
         <a href="#about" class="scroll-down-btn" aria-label="Scroll to About section">
-          <span>${b.tagline || "Explore"}</span>
+          <span>${b.tagline}</span>
           <i class="bi bi-chevron-double-down"></i>
         </a>
       </div>
+      `
+          : ""
+      }
     `;
   }
 

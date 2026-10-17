@@ -9,9 +9,8 @@ banner:
   enable: true
   bg_image_webp: "images/backgrounds/white-wall.webp"
   bg_image: "images/backgrounds/white-wall.jpg"
-  title: "Alin M Elena"
+  title: "Alin Marin Elena"
   subtitle: "Computational Scientist • Materials & Molecular Modelling"
-  tagline: "personal site ⇓"
 
 menu:
   - name: "Home"
