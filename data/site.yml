@@ -48,8 +48,8 @@ menu:
 
 dividers:
   after_about:
-    bg_image_webp: "images/backgrounds/red-wall.webp"
-    bg_image: "images/backgrounds/red-wall.jpg"
+    bg_image_webp: "images/backgrounds/old-brick-wall.webp"
+    bg_image: "images/backgrounds/old-brick-wall.jpg"
   after_cv:
     bg_image_webp: "images/backgrounds/stone-wall.webp"
     bg_image: "images/backgrounds/stone-wall.jpg"
