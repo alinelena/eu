@@ -156,6 +156,38 @@ a:hover {
   align-items: flex-end;
 }
 
+.corner-nav-btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.corner-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(15, 19, 24, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--accent-cyan);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 1.15rem;
+}
+
+.corner-theme-btn:hover,
+.corner-theme-btn[aria-expanded="true"] {
+  border-color: var(--accent-cyan);
+  background: rgba(22, 28, 36, 0.95);
+  box-shadow: 0 10px 32px rgba(87, 203, 204, 0.25);
+  transform: translateY(-1px) rotate(15deg);
+}
+
 .corner-menu-btn {
   display: inline-flex;
   align-items: center;
@@ -245,6 +277,131 @@ a:hover {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
+}
+
+.corner-theme-panel {
+  margin-top: 0.65rem;
+  width: 290px;
+  max-width: calc(100vw - 2.5rem);
+  background: rgba(18, 23, 30, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1rem;
+  padding: 0.95rem;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.97);
+  transform-origin: top right;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.corner-theme-panel.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.theme-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.theme-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.48rem 0.65rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.18s ease;
+  font-size: 0.92rem;
+}
+
+.theme-option-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-option-btn.active {
+  background: color-mix(in srgb, var(--accent-cyan) 18%, transparent);
+  border-color: var(--accent-cyan);
+  color: #fff;
+  font-weight: 600;
+}
+
+.theme-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--swatch-1) 0%, var(--swatch-2) 100%);
+  border: 2px solid var(--swatch-bg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.theme-name {
+  flex-grow: 1;
+}
+
+.theme-check-icon {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.theme-option-btn.active .theme-check-icon {
+  opacity: 1;
+}
+
+/* Theme Swatches in Navigation Menu */
+.theme-menu-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.theme-swatch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.theme-swatch-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pill-accent);
+}
+
+.theme-swatch-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.theme-swatch-pill.active {
+  background: color-mix(in srgb, var(--pill-accent) 20%, transparent);
+  border-color: var(--pill-accent);
+  color: #fff;
+  font-weight: 600;
 }
 
 .corner-nav-list {
