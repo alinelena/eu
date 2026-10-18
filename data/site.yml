@@ -8,8 +8,8 @@ favicon: "images/favicon.png"
 
 banner:
   enable: true
-  bg_image_webp: "images/backgrounds/white-wall.webp"
-  bg_image: "images/backgrounds/white-wall.jpg"
+  bg_image_webp: "images/backgrounds/exterior-stone-wall.webp"
+  bg_image: "images/backgrounds/exterior-stone-wall.jpg"
   title: "Alin Marin Elena"
   subtitle: "Computational Scientist • Materials & Molecular Modelling"
 
