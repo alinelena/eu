@@ -283,9 +283,13 @@
         const iconClass = isEdu ? "bi-mortarboard-fill" : "bi-briefcase-fill";
         const sideClass = idx % 2 === 0 ? "timeline-left" : "timeline-right";
         const color = ev.color || cvPointColors[idx % cvPointColors.length];
+        const markerClass = ev.image ? "timeline-marker has-image" : "timeline-marker";
+        const markerInner = ev.image
+          ? `<img src="${ev.image}" alt="${ev.role} (${ev.period})" class="timeline-marker-img">`
+          : "";
         return `
           <div class="timeline-item ${sideClass}" data-category="${ev.category}" data-item-color="${color}" style="--item-color: ${color};">
-            <div class="timeline-marker" title="${ev.type_label}"></div>
+            <div class="${markerClass}" title="${ev.role} (${ev.period})">${markerInner}</div>
             <div class="timeline-card">
               <div class="timeline-meta">
                 <span class="timeline-period">

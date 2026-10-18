@@ -643,8 +643,38 @@ a:hover {
   transition: transform 0.22s ease;
 }
 
+.timeline-marker.has-image {
+  top: 1.05rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 2.5px solid var(--item-color, var(--accent-cyan));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 25%, transparent),
+              0 0 16px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 40%, transparent);
+}
+
+.timeline-marker.has-image::after {
+  display: none;
+}
+
+.timeline-marker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
 .timeline-item.timeline-left .timeline-marker {
   right: -0.75rem;
+  transform: translateX(-10px);
+}
+
+.timeline-item.timeline-left .timeline-marker.has-image {
+  right: -1.375rem;
   transform: translateX(-10px);
 }
 
@@ -653,9 +683,26 @@ a:hover {
   transform: translateX(10px);
 }
 
+.timeline-item.timeline-right .timeline-marker.has-image {
+  left: -1.375rem;
+  transform: translateX(10px);
+}
+
 .timeline-item:hover .timeline-marker {
   box-shadow: 0 0 0 7px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 32%, transparent),
               0 0 20px color-mix(in srgb, var(--item-color, var(--accent-cyan)) 55%, transparent);
+}
+
+.timeline-item.timeline-left:hover .timeline-marker.has-image {
+  transform: translateX(-10px) scale(1.12);
+}
+
+.timeline-item.timeline-right:hover .timeline-marker.has-image {
+  transform: translateX(10px) scale(1.12);
+}
+
+.timeline-item:hover .timeline-marker.has-image .timeline-marker-img {
+  transform: scale(1.08);
 }
 
 .timeline-item:hover .timeline-marker::after {
@@ -694,15 +741,27 @@ a:hover {
   .timeline-item.timeline-right {
     width: 100%;
     left: 0;
-    padding-left: 3.25rem;
+    padding-left: 3.5rem;
     padding-right: 0;
   }
 
   .timeline-item.timeline-left .timeline-marker,
   .timeline-item.timeline-right .timeline-marker {
-    left: 0.5rem;
+    left: 1.25rem;
     right: auto;
-    transform: none;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item.timeline-left .timeline-marker.has-image,
+  .timeline-item.timeline-right .timeline-marker.has-image {
+    left: 1.25rem;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item.timeline-left:hover .timeline-marker.has-image,
+  .timeline-item.timeline-right:hover .timeline-marker.has-image {
+    transform: translateX(-50%) scale(1.12);
   }
 }
 
