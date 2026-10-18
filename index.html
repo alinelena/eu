@@ -29,7 +29,7 @@
   <script>
     (function () {
       try {
-        const savedTheme = localStorage.getItem("site-theme") || "default";
+        const savedTheme = localStorage.getItem("mlego-theme") || localStorage.getItem("site-theme") || "default";
         document.documentElement.setAttribute("data-theme", savedTheme);
       } catch (e) {}
     })();

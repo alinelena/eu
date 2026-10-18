@@ -799,10 +799,11 @@
       if (!themeNames[themeId]) themeId = "default";
       document.documentElement.setAttribute("data-theme", themeId);
       try {
+        localStorage.setItem("mlego-theme", themeId);
         localStorage.setItem("site-theme", themeId);
       } catch (e) {}
 
-      document.querySelectorAll("[data-theme-id]").forEach((btn) => {
+      document.querySelectorAll(".theme-option-btn, .theme-swatch-pill").forEach((btn) => {
         const id = btn.getAttribute("data-theme-id");
         btn.classList.toggle("active", id === themeId);
       });
@@ -814,7 +815,8 @@
       drawTimelineWave();
     }
 
-    const currentTheme = document.documentElement.getAttribute("data-theme") || "default";
+    const currentTheme =
+      document.documentElement.getAttribute("data-theme") || "default";
     applyTheme(currentTheme);
 
     function closeThemePanel() {
@@ -838,26 +840,27 @@
       }
     }
 
-    if (themeBtn) {
+    if (themeBtn && themePanel) {
       themeBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleThemePanel();
       });
+
+      document.addEventListener("click", (e) => {
+        if (!themePanel.contains(e.target) && !themeBtn.contains(e.target)) {
+          closeThemePanel();
+        }
+      });
     }
 
-    document.querySelectorAll("[data-theme-id]").forEach((btn) => {
+    document.querySelectorAll(".theme-option-btn, .theme-swatch-pill").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        e.stopPropagation();
+        e.preventDefault();
         const themeId = btn.getAttribute("data-theme-id");
-        applyTheme(themeId);
-        closeThemePanel();
+        if (themeId) {
+          applyTheme(themeId);
+        }
       });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (themePanel && themeBtn && !themePanel.contains(e.target) && !themeBtn.contains(e.target)) {
-        closeThemePanel();
-      }
     });
 
     document.addEventListener("keydown", (e) => {
