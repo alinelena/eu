@@ -24,34 +24,133 @@
 
   <!-- Custom Dark Theme Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Theme Initializer (prevents flash of default theme) -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem("site-theme") || "default";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
-  <!-- Floating Corner Navigation Menu -->
-  <nav class="corner-nav-wrapper" aria-label="Site navigation">
-    <button
-      type="button"
-      id="corner-menu-toggle"
-      class="corner-menu-btn"
-      aria-expanded="false"
-      aria-controls="corner-menu-panel"
-      aria-label="Toggle navigation menu"
-    >
-      <img id="corner-btn-logo" src="images/logo.png" alt="Logo" class="brand-avatar">
-      <span id="corner-current-section">Menu</span>
-      <span class="menu-icon-bars" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </button>
+  <!-- Floating Corner Navigation & Theme Menu -->
+  <nav class="corner-nav-wrapper" aria-label="Site navigation and theme controls">
+    <div class="corner-nav-btn-group">
+      <button
+        type="button"
+        id="corner-theme-toggle"
+        class="corner-theme-btn"
+        aria-expanded="false"
+        aria-controls="corner-theme-panel"
+        aria-label="Choose color theme"
+        title="Choose color theme"
+      >
+        <i class="bi bi-palette-fill"></i>
+      </button>
+      <button
+        type="button"
+        id="corner-menu-toggle"
+        class="corner-menu-btn"
+        aria-expanded="false"
+        aria-controls="corner-menu-panel"
+        aria-label="Toggle navigation menu"
+      >
+        <img id="corner-btn-logo" src="images/logo.png" alt="Logo" class="brand-avatar">
+        <span id="corner-current-section">Menu</span>
+        <span class="menu-icon-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
 
+    <!-- Theme Selection Panel -->
+    <div id="corner-theme-panel" class="corner-theme-panel" role="dialog" aria-label="Color theme selector">
+      <div class="d-flex align-items-center justify-content-between px-2 pb-2 mb-2 border-bottom border-secondary border-opacity-25">
+        <span class="fw-bold text-white small text-uppercase" style="letter-spacing: 0.06em;"><i class="bi bi-palette me-1 text-info"></i> Color Theme</span>
+        <span class="badge bg-dark text-info border border-info border-opacity-25" id="theme-active-name">Cyber Cyan</span>
+      </div>
+      <div class="theme-options-grid">
+        <button type="button" class="theme-option-btn active" data-theme-id="default" title="Cyber Cyan: Modern cyan and emerald cyber aesthetic">
+          <span class="theme-swatch" style="--swatch-1: #57cbcc; --swatch-2: #6cb670; --swatch-bg: #0f1318;"></span>
+          <span class="theme-name">Cyber Cyan</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="nord" title="Nord Frost: Arctic ice and polar aurora night">
+          <span class="theme-swatch" style="--swatch-1: #88c0d0; --swatch-2: #a3be8c; --swatch-bg: #242933;"></span>
+          <span class="theme-name">Nord Frost</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="dracula" title="Dracula: Vampire purple and neon electric pink">
+          <span class="theme-swatch" style="--swatch-1: #bd93f9; --swatch-2: #ff79c6; --swatch-bg: #21222c;"></span>
+          <span class="theme-name">Dracula</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="monokai" title="Monokai Pro: Vibrant warm amber and magenta neon">
+          <span class="theme-swatch" style="--swatch-1: #ffd866; --swatch-2: #ff6188; --swatch-bg: #19181a;"></span>
+          <span class="theme-name">Monokai Pro</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="gruvbox" title="Gruvbox Retro: Vintage warm amber, orange and retro forest">
+          <span class="theme-swatch" style="--swatch-1: #fabd2f; --swatch-2: #8ec07c; --swatch-bg: #1d2021;"></span>
+          <span class="theme-name">Gruvbox Retro</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="catppuccin" title="Catppuccin Mocha: Velvet mauve, flamingo and sapphire">
+          <span class="theme-swatch" style="--swatch-1: #cba6f7; --swatch-2: #f5c2e7; --swatch-bg: #11111b;"></span>
+          <span class="theme-name">Catppuccin</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+        <button type="button" class="theme-option-btn" data-theme-id="solarized" title="Solarized Dark: Deep teal ocean, cyan and solar amber">
+          <span class="theme-swatch" style="--swatch-1: #2aa198; --swatch-2: #cb4b16; --swatch-bg: #00212b;"></span>
+          <span class="theme-name">Solarized</span>
+          <i class="bi bi-check2 theme-check-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation Panel -->
     <div id="corner-menu-panel" class="corner-menu-panel" role="menu">
       <div class="d-flex align-items-center justify-content-between px-2 pb-2 mb-2 border-bottom border-secondary border-opacity-25">
         <span class="fw-bold text-white small text-uppercase" style="letter-spacing: 0.06em;">Navigation</span>
         <span class="badge bg-dark text-info border border-info border-opacity-25">alin.elena.re</span>
       </div>
       <ul id="corner-nav-list" class="corner-nav-list"></ul>
+
+      <!-- Theme Selector inside Menu -->
+      <div class="border-top border-secondary border-opacity-25 pt-2 mt-2">
+        <div class="px-2 pb-2 d-flex align-items-center justify-content-between">
+          <span class="small text-secondary text-uppercase fw-semibold" style="letter-spacing: 0.05em;"><i class="bi bi-palette me-1"></i> Color Theme</span>
+        </div>
+        <div class="d-flex flex-wrap gap-1 px-2 pb-1 theme-menu-swatches">
+          <button type="button" class="theme-swatch-pill active" data-theme-id="default" title="Cyber Cyan" style="--pill-accent: #57cbcc;">
+            <span class="dot"></span> Cyber
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="nord" title="Nord Frost" style="--pill-accent: #88c0d0;">
+            <span class="dot"></span> Nord
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="dracula" title="Dracula" style="--pill-accent: #bd93f9;">
+            <span class="dot"></span> Dracula
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="monokai" title="Monokai Pro" style="--pill-accent: #ffd866;">
+            <span class="dot"></span> Monokai
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="gruvbox" title="Gruvbox Retro" style="--pill-accent: #fabd2f;">
+            <span class="dot"></span> Gruvbox
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="catppuccin" title="Catppuccin Mocha" style="--pill-accent: #cba6f7;">
+            <span class="dot"></span> Mocha
+          </button>
+          <button type="button" class="theme-swatch-pill" data-theme-id="solarized" title="Solarized Dark" style="--pill-accent: #2aa198;">
+            <span class="dot"></span> Solarized
+          </button>
+        </div>
+      </div>
     </div>
   </nav>
 
