@@ -148,18 +148,12 @@
           ? `<p class="hero-subtitle">${b.subtitle.replace("•", '<span class="hero-bullet">•</span>')}</p>`
           : ""
       }
-      ${
-        b.tagline
-          ? `
-      <div>
-        <a href="#about" class="scroll-down-btn" aria-label="Scroll to About section">
-          <span>${b.tagline}</span>
+      <div class="hero-scroll-wrapper">
+        <a href="#about" class="scroll-down-btn" aria-label="Scroll down to About section" title="Scroll down">
+          ${b.tagline ? `<span>${b.tagline}</span>` : ""}
           <i class="bi bi-chevron-double-down"></i>
         </a>
       </div>
-      `
-          : ""
-      }
     `;
   }
 
