@@ -105,6 +105,7 @@ events:
     category: "education"
     type_label: "Education"
     color: "#818cf8"
+    image: "images/cv/alin-1996.webp"
     role: "High School Diploma (Informatics class, GPA 9.87/10)"
     organization: "High School \"Gib Mihaescu\""
     location: "Dragasani, Romania"
