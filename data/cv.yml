@@ -92,6 +92,7 @@ events:
     category: "education"
     type_label: "Education"
     color: "#c084fc"
+    image: "images/cv/alin-2000.webp"
     role: "BSc in Physics (Honours, 9.85/10)"
     organization: "Faculty of Physics, University of Bucharest"
     location: "Bucharest, Romania"
