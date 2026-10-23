@@ -81,6 +81,7 @@ events:
     category: "education"
     type_label: "Education"
     color: "#f472b6"
+    image: "images/cv/alin-2004.webp"
     role: "PhD Student"
     organization: "School of Mathematics and Physics, Atomistic Simulation Centre, Queen's University Belfast"
     location: "Belfast, United Kingdom"
